@@ -8,6 +8,20 @@
         background-attachment: scroll !important;
         background-size: cover !important;
     }
+    @media (max-width: 768px) {
+        .masthead h1 {
+            font-size: 1.8rem !important; /* Biar teks gak nabrak dinding HP */
+        }
+        .masthead h2 {
+            font-size: 1rem !important;
+        }
+    }
+    
+    /* Pengaman agar tidak bisa digeser ke kanan */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
     footer.footer {
     font-family: 'Times New Roman', serif !important;
     letter-spacing: 1px; /* Memberi jarak antar huruf agar elegan */
