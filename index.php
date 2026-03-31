@@ -87,23 +87,8 @@
 <?php endif; ?>
 
 <?php if(isset($_GET['akses']) || isset($_GET['halaman'])): ?>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <div class=" px-4 px-lg-5">
-            
-            <?php if(isset($_GET['halaman']) && in_array($_GET['halaman'], $rentetan)): ?>
-                <button class="btn btn-sidebar-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarPKA">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            <?php endif; ?>
-
-            <a class="navbar-brand ms-4">GUIDEBOOK PKA </a>
-            
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-    <?php endif; ?>
+    <?php include 'navbar.php'; ?>
+<?php endif; ?>
 
     <div id="content-display">
         <?php 
