@@ -75,10 +75,10 @@ footer.footer strong {
                 </div>
                 <img class="img-fluid " src="assets/img/_MG_6117.jpg"style="width: 500px; height: auto;" alt="..." />
                  <p class= "text-Black\-50 pt-3 mb-4" >
-    Melihat zaman yang semakin maju dan berkembang, Pondok Modern Darussalam Gontor kembali datang untuk mengikuti Kemajuan zaman. Dengan selalu berkomitmen tidak meniggalkan serta akan terus menanam nilai-nilai islam yang telah menjadi shibghah Gontor sedari dulu.
-        Melalui Pekan Perkenalan Khutbatu-L-'Arsy ini Gontor dengan berbagai ragam kegiatannya bisa meningkatkan serta terus berkembang dalam ranah pendidikan juga pengajaran demi menyongsong seratus tahun Pondok Modern Darussalam Gontor.
-</p>
-            </div>
+                    Melihat zaman yang semakin maju dan berkembang, Pondok Modern Darussalam Gontor kembali datang untuk mengikuti Kemajuan zaman. Dengan selalu berkomitmen tidak meniggalkan serta akan terus menanam nilai-nilai islam yang telah menjadi shibghah Gontor sedari dulu.
+                    Melalui Pekan Perkenalan Khutbatu-L-'Arsy ini Gontor dengan berbagai ragam kegiatannya bisa meningkatkan serta terus berkembang dalam ranah pendidikan juga pengajaran demi menyongsong seratus tahun Pondok Modern Darussalam Gontor.
+                </p>
+         </div>
         </section>
         <!--Main Stuff-->
         <section class="main stuff bg-light" id="main_stuff">
@@ -119,7 +119,7 @@ footer.footer strong {
                             <h4>Acara</h4>
                             <p class="text-black-50 mb-3">ini nanti isinya penjelasan umum tentang kegiatan hari-H pka! trus sampingnya fotonya</p>
                     <!-- ini buat tombol -->
-                        <a href="index.php?halaman=serba_serbi" class="tombol-gerak">
+                        <a href="index.php?halaman=acara" class="tombol-gerak">
                         <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
                       </a>
                         </div>

@@ -47,45 +47,6 @@
 
 <body id="page-top">
 
-<?php 
-    // 1. Definisikan semua halaman yang BOLEH diakses
-    $rentetan = ['acara', 'data', 'serba_serbi', 'rentetan', 'denah', 'kritik']; 
-    
-    // 2. Ambil nilai dari URL (biar nulisnya lebih pendek nanti)
-    $halaman_aktif = isset($_GET['halaman']) ? $_GET['halaman'] : null;
-    $akses_masuk = (isset($_GET['akses']) && $_GET['akses'] == 'masuk');
-
-    // Tampilkan Sidebar HANYA jika halaman ada di daftar valid
-    if(in_array($halaman_aktif, $rentetan)): 
-?>
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="sidebarPKA" aria-labelledby="offcanvasExampleLabel">
-      <div class="offcanvas-header border-bottom border-secondary">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">MENU NAVIGASI</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2">
-            <a class="nav-link text-white hover-link" href="index.php?akses=masuk"><i class="fas fa-home me-2"></i> Beranda</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a class="nav-link text-white hover-link" href="index.php?halaman=rentetan"><i class="fas fa-book-open me-2"></i> Rentetan Kegiatan PKA</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a class="nav-link text-white hover-link" href="index.php?halaman=data"><i class="fas fa-book-open me-2"></i> Data</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a class="nav-link text-white hover-link" href="index.php?halaman=serba_serbi"><i class="fas fa-book-open me-2"></i> Serba-Serbi</a>
-          </li>
-          <hr>
-          <li class="nav-item mb-2">
-            <a class="nav-link text-danger" href="index.php"><i class="fas fa-sign-out-alt me-2"></i> Keluar</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-<?php endif; ?>
-
 <?php if(isset($_GET['akses']) || isset($_GET['halaman'])): ?>
     <?php include 'navbar.php'; ?>
 <?php endif; ?>

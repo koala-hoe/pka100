@@ -189,12 +189,12 @@ function muatData(jenis) {
                         <tr><th>Bagian</th><th>Jumlah</th></tr>
                     </thead>
                     <tbody>
-                        <tr><td>DCC</td><td>7</td></tr>
-                        <tr><td>Wartel Cordova</td><td>5</td></tr>
-                        <tr><td>Wartel Teheran</td><td>5</td></tr>
-                        <tr><td>Wartel Thoif</td><td>5</td></tr>
-                        <tr><td>Kesenian dan Olahraga</td><td>11</td></tr>
-                        <tr><td>Pusat Data</td><td>7</td></tr>
+                        <tr><td>Pengasuhan</td><td>7</td></tr>
+                        <tr><td>Administrasi</td><td>5</td></tr>
+                        <tr><td>Sekertaris Wakil Pengasuh</td><td>5</td></tr>
+                        <tr><td>Pusat Data</td><td>5</td></tr>
+                        <tr><td>DRS</td><td>11</td></tr>
+                        <tr><td>KMI</td><td>7</td></tr>
                         <tr><td>Perpustakaan</td><td>5</td></tr>
                         <tr><td>Kebersihan dan Persepedaan</td><td>5</td></tr>
                         <tr><td>BKSM</td><td>5</td></tr>
