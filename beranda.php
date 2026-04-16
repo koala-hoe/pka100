@@ -57,10 +57,9 @@ footer.footer strong {
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">PEKAN PERKENALAN</h1>
-                <h1 class="mx-auto my-0 text-uppercase mb-5">KHUTBATU-L-'ARSY</h1> 
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">"Gontor Berkomitmen Menanamkan Nilai-Nilai Islam"</h2>
-               
+                <h1 class="text-uppercase"><?php echo $t['judul_1']; ?></h1>
+            <h1 class="text-uppercase mb-5"><?php echo $t['judul_2']; ?></h1> 
+            <h2 class="text-white-50"><?php echo $t['slogan']; ?></h2>
             </div> 
         </div>
     </div>
@@ -70,13 +69,12 @@ footer.footer strong {
     <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-Black mb-4"style="font-family: 'Times new Roman', sans-serif; font-size: 50px;">"Gontor Berkomitmen Menanamkan Nilai-Nilai Islam"</h2>
+                        <h2 class="text-Black mb-4"><?php echo $t['slogan']; ?></h2>
                     </div>
                 </div>
-                <img class="img-fluid " src="assets/img/_MG_6117.jpg"style="width: 500px; height: auto;" alt="..." />
+                <img class="img-fluid " src="assets/img/logo warna.jpg"style="width: 500px; height: auto;" alt="..." />
                  <p class= "text-Black\-50 pt-3 mb-4" >
-                    Melihat zaman yang semakin maju dan berkembang, Pondok Modern Darussalam Gontor kembali datang untuk mengikuti Kemajuan zaman. Dengan selalu berkomitmen tidak meniggalkan serta akan terus menanam nilai-nilai islam yang telah menjadi shibghah Gontor sedari dulu.
-                    Melalui Pekan Perkenalan Khutbatu-L-'Arsy ini Gontor dengan berbagai ragam kegiatannya bisa meningkatkan serta terus berkembang dalam ranah pendidikan juga pengajaran demi menyongsong seratus tahun Pondok Modern Darussalam Gontor.
+                    <?php echo $t ['narasi_pembuka']; ?>
                 </p>
          </div>
         </section>
@@ -85,7 +83,7 @@ footer.footer strong {
             <div class="container px-4 px-lg-5">
                 <!--1 Rentetan Kegiatan PKA Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/22 UST AMAL.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Rentetan Kegiatan PKA</h4>

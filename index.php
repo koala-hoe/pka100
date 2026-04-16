@@ -1,5 +1,6 @@
 <?php 
     include 'header.php'; 
+    include 'bahasa.php';
 ?>
 <style>
     /* Global Font Fix */
