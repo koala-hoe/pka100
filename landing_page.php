@@ -29,9 +29,9 @@
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase" style="font-size: 3rem;">PEKAN PERKENALAN</h1>
-                <h1 class="mx-auto my-0 text-uppercase" style="font-size: 2.5rem;">KHUTBATU-L-'ARSY</h1> 
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">"Gontor Berkomitmen Menanamkan Nilai-Nilai Islam"</h2>
+                <h1 class="text-uppercase"><?php echo $t['judul_1']; ?></h1>
+            <h1 class="text-uppercase mb-5"><?php echo $t['judul_2']; ?></h1> 
+            <h2 class="text-white-50"><?php echo $t['slogan']; ?></h2>
                 
                 <a class="btn btn-primary px-4 py-3 mt-5" href="index.php?akses=masuk" >
                     BERANDA

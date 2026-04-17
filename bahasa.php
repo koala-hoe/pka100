@@ -23,8 +23,18 @@ $daftar_kata = [
         'menu_acara' => 'Events',
         'menu_serba' => 'Miscellaneous',
         'redaksi' => 'Editorial Team'
+    ],
+    'ar' => [
+        'judul_1' => 'أسبوع التعارف',
+        'judul_2' => "خطبة العرش",
+        'slogan' => '"جونتور تلتزم بغرس القيم الإسلامية"',
+        'narasi_pembuka' => 'رؤية للزمان المتقدم والمتطور، يعود معهد دار السلام كونتور للتربية الإسلامية الحديثة لمواكبة تطور الزمان...',
+        'menu_acara' => 'البرامج',
     ]
 ];
 
 $t = $daftar_kata[$lang];
 ?>
+<script>
+    const kamus = <?php echo json_encode($daftar_kata); ?>;
+</script>

@@ -57,9 +57,9 @@ footer.footer strong {
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="text-uppercase"><?php echo $t['judul_1']; ?></h1>
-            <h1 class="text-uppercase mb-5"><?php echo $t['judul_2']; ?></h1> 
-            <h2 class="text-white-50"><?php echo $t['slogan']; ?></h2>
+                <h1 class="lang-txt" data-key="judul_1"></h1>
+                <h1 class="lang-txt" data-key="judul_2"></h1>
+            <h2 class="text-white-50 lang-txt" data-key="slogan"></h2>
             </div> 
         </div>
     </div>
@@ -69,12 +69,11 @@ footer.footer strong {
     <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-Black mb-4"><?php echo $t['slogan']; ?></h2>
+                        <h2 class="text-Black mb-4 lang-txt" data-key="slogan"></h2>
                     </div>
                 </div>
                 <img class="img-fluid " src="assets/img/logo warna.jpg"style="width: 500px; height: auto;" alt="..." />
-                 <p class= "text-Black\-50 pt-3 mb-4" >
-                    <?php echo $t ['narasi_pembuka']; ?>
+                 <p class= "text-Black\-50 pt-3 mb-4 lang-txt" data-key="narasi_pembuka" >
                 </p>
          </div>
         </section>

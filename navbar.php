@@ -1,6 +1,6 @@
 <?php 
     // 1. Definisikan semua halaman yang BOLEH diakses
-    $rentetan = ['acara', 'data', 'serba_serbi', 'rentetan', 'kritik']; 
+    $rentetan = ['beranda','acara', 'data', 'serba_serbi', 'rentetan', 'kritik']; 
     
     // 2. Ambil nilai dari URL (biar nulisnya lebih pendek nanti)
     $halaman_aktif = isset($_GET['halaman']) ? $_GET['halaman'] : null;
@@ -53,4 +53,9 @@
         <a class="navbar-brand fw-bold">GUIDEBOOK PKA</a>
         
     </div>
+    <div class="ms-auto d-flex">
+    <button id="btn-id" onclick="gantiBahasa('id')" class="btn btn-sm btn-bahasa btn-success me-1">ID</button>
+    <button id="btn-en" onclick="gantiBahasa('en')" class="btn btn-sm btn-bahasa btn-outline-dark me-1">EN</button>
+    <button id="btn-ar" onclick="gantiBahasa('ar')" class="btn btn-sm btn-bahasa btn-outline-dark">AR</button>
+</div>
 </nav>
