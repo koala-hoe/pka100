@@ -13,11 +13,11 @@ $daftar_kata = [
         'menu_serba' => 'Serba-Serbi',
         'redaksi' => 'Tim Redaksi',
         'menu_beranda' => 'Beranda',
-        'menu_rentetan' => 'Rentetan Kegiatan',
-        'menu_data' => 'Data',
-        'menu_acara' => 'Acara',
-        'menu_serba' => 'Serba-Serbi',
         'menu_keluar' => 'Keluar',
+        'narasiup_rentetan' => 'ini nanti isinya penjelasan umum tentang rentetan kegiatan pka! trus sampingnya foto kegiatan',
+        'narasiup_data' => 'ini nanti isinya penjelasan umum tentang data pka! trus sampingnya foto kegiatan',
+        'narasiup_acara' => 'ini nanti isinya penjelasan umum tentang acara pka! trus sampingnya foto kegiatan',
+        'narasiup_serba' => 'ini nanti isinya penjelasan ya perentelan yg lain lah',
     ],
     'en' => [
         'judul_1' => 'ORIENTATION WEEK',
@@ -30,11 +30,11 @@ $daftar_kata = [
         'menu_serba' => 'Miscellaneous',
         'redaksi' => 'Editorial Team',
         'menu_beranda' => 'Home',
-        'menu_rentetan' => 'Event Schedule',
-        'menu_data' => 'Data',
-        'menu_acara' => 'Events',
-        'menu_serba' => 'Miscellany',
         'menu_keluar' => 'Logout',
+        'narasiup_rentetan' => 'This section will contain a general explanation of the series of PKA activities, with photos of the activities displayed alongside.',
+        'narasiup_data' => 'This section will contain a general explanation of the PKA data, with photos of the activities displayed alongside.',
+        'narasiup_acara' => 'This section will contain a general explanation of the PKA events, with photos of the activities displayed alongside.',
+        'narasiup_serba' => 'This section will contain a general explanation of the various other details, with photos of the activities displayed alongside.'
     ],
     'ar' => [
         'judul_1' => 'أسبوع التعارف',
@@ -45,9 +45,12 @@ $daftar_kata = [
         'menu_beranda' => 'الرئيسية',
         'menu_rentetan' => 'جدول البرامج',
         'menu_data' => 'البيانات',
-        'menu_acara' => 'البرامج',
         'menu_serba' => 'متنوعات',
         'menu_keluar' => 'خروج',
+        'narasiup_rentetan' => 'سَيَحْتَوِي هَذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِسِلْسِلَةِ أَنْشِطَةِ PKA، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
+        'narasiup_data' => 'سَيَحْتَوِي هَذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِبَيَانَاتِ PKA، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
+        'narasiup_acara' => 'سَيَحْتَوِي هَذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِلْبَرَامِجِ PKA، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
+        'narasiup_serba' => 'سَيَحْتَوِي ه   َذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِلْتَفَاصِيلِ الأُخْرَى المُتَنَوِّعَةِ، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
     ]
 ];
 

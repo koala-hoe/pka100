@@ -47,24 +47,27 @@
     /* 1. Aturan Dasar untuk SEMUA teks Arab */
 body[style*="direction: rtl"] .lang-txt {
     font-family: 'Amiri', serif !important;
-    line-height: 1 !important;
+    line-height: 1.8 !important;
+    text-align: right !important; /* Memastikan teks mulai dari kanan */
 }
 
-/* 2. Khusus untuk Judul (H1) - Tetap Besar */
-body[style*="direction: rtl"] h1.lang-txt {
-    font-size: 3rem !important; /* Ukuran judul raksasa */
-    margin-bottom: 20px;
+/* 2. Agar teks tidak "kabur" keluar layar, batasi containernya */
+body[style*="direction: rtl"] .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
 }
 
-/* 3. Khusus untuk Slogan (H2) - Sedang */
-body[style*="direction: rtl"] h2.lang-txt {
-    font-size: 1.8rem !important;
-}
-
-/* 4. Khusus untuk Paragraf Narasi (P) - Kecilkan di sini */
+/* 3. Khusus untuk Paragraf Narasi agar tetap di tengah dan rapi */
 body[style*="direction: rtl"] p.lang-txt {
-    font-size: 1.2rem !important; /* Ukuran narasi yang nyaman dibaca */
-    text-align: justify;         /* Agar rapi rata kanan-kiri */
+    font-size: 1.25rem !important;
+    max-width: 100%; /* Pastikan tidak melebihi lebar layar mobile */
+    text-align: justify !important; /* Rata kanan-kiri biar estetik */
+    direction: rtl;
+}
+
+/* 4. Judul tetap besar tapi terkontrol */
+body[style*="direction: rtl"] h1.lang-txt {
+    font-size: 2.5rem !important;
 }
 </style>
 
@@ -96,6 +99,8 @@ body[style*="direction: rtl"] p.lang-txt {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
+
+        
 function gantiBahasa(pilihan) {
     // --- BAGIAN 1: GANTI TEKS (Sama seperti sebelumnya) ---
     const elemenTeks = document.querySelectorAll('.lang-txt');
@@ -137,6 +142,8 @@ window.onload = function() {
     } else {
         gantiBahasa('id');
     }
+    window.scrollTo(0, 0); 
+    localStorage.setItem('bahasaDipilih', pilihan);
 };
 </script>
 </body>

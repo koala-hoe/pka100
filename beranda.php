@@ -85,8 +85,8 @@ footer.footer strong {
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/22 UST AMAL.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Rentetan Kegiatan PKA</h4>
-                            <p class="text-black-50 mb-3">ini nanti isinya penjelasan umum tentang rentetan kegiatan pka! trus sampingnya foto kegiatan</p>
+                            <h4 class= "lang-txt" data-key="menu_rentetan"></h4>
+                            <p class="text-black-50 mb-3 lang-txt" data-key="narasiup_rentetan"></p>
                     <!-- ini buat tombol -->
                        <a href="index.php?halaman=rentetan"class="tombol-gerak">
                         <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
@@ -99,8 +99,8 @@ footer.footer strong {
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Data</h4>
-                            <p class="text-black-50 mb-3">ini nanti isinya penjelasan umum tentang Data trus sampingnya fotonya</p>
+                            <h4 class= "lang-txt" data-key="menu_data"></h4>
+                            <p class="text-black-50 mb-3 lang-txt" data-key="narasiup_data"></p>
                     <!-- ini buat tombol -->
                         <a href="index.php?halaman=data"class="tombol-gerak">
                         <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
@@ -113,8 +113,8 @@ footer.footer strong {
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Acara</h4>
-                            <p class="text-black-50 mb-3">ini nanti isinya penjelasan umum tentang kegiatan hari-H pka! trus sampingnya fotonya</p>
+                            <h4 class="lang-txt" data-key="menu_acara"></h4>
+                            <p class="text-black-50 mb-3 lang-txt" data-key="narasiup_acara"></p>
                     <!-- ini buat tombol -->
                         <a href="index.php?halaman=acara" class="tombol-gerak">
                         <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
@@ -127,8 +127,8 @@ footer.footer strong {
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Serba-Serbi</h4>
-                            <p class="text-black-50 mb-3">ini nanti isinya penjelasan ya perentelan yg lain lah</p>
+                            <h4 class="lang-txt" data-key="menu_serba"></h4>
+                            <p class="text-black-50 mb-3 lang-txt" data-key="narasiup_serba"></p>
                     <!-- ini buat tombol -->
                       <a href="index.php?halaman=serba_serbi" class="tombol-gerak">
                          <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
