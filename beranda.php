@@ -1,7 +1,7 @@
 
 <style>
     .masthead {
-        background: linear-gradient(to bottom, rgba(255, 235, 235, 0.3) 0%, #0c7c5e 75%, #064e3b 100%), 
+        background: linear-gradient(to bottom, hsla(0, 100%, 96%, 0.30) 0%, #cfb068 75%, #D3A63F 100%), 
                     url("assets/img/test-bg.jpg") !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
@@ -78,7 +78,7 @@ footer.footer strong {
          </div>
         </section>
         <!--Main Stuff-->
-        <section class="main stuff bg-light" id="main_stuff">
+        <section class="main stuff" id="main_stuff" style="background: transparent;">
             <div class="container px-4 px-lg-5">
                 <!--1 Rentetan Kegiatan PKA Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
@@ -168,7 +168,7 @@ footer.footer strong {
 }
 </style>
         <!-- Credit-->
-      <footer class="footer py-5 text-white" style="background-color: #064e3b; font-family: 'Times New Roman', serif;">
+      <footer class="footer py-5 text-white" style="background-color: #70391D; font-family: 'Times New Roman', serif;">
     <div class="container-fluid px-lg-5"> <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
                 <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; padding-bottom: 5px;">Tim Redaksi</h5>

@@ -3,6 +3,21 @@
     include 'bahasa.php';
 ?>
 <style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%; /* Memastikan background sampai ke paling bawah */
+}
+
+body {
+    /* Menggunakan path yang sudah benar dari gambar terakhirmu */
+    background-image: url('assets/img/Background Marmer.png'); 
+    background-attachment: fixed; /* Menjaga background tetap saat di-scroll */
+    background-size: 100% auto;   /* Menutup lebar layar secara penuh */
+    background-position: top center;
+    background-repeat: repeat-y;  /* Mengulang tekstur ke bawah jika konten sangat panjang */
+    background-color: #f8f9fa;    /* Warna cadangan jika gambar gagal load */
+}
     /* Global Font Fix */
     body, h1, h2, h3, h4, h5, h6, p, a, button {
         font-family: 'Times New Roman', Times, serif !important;
@@ -44,31 +59,29 @@
         top: 10px;
         z-index: 9999;
     }
-    /* 1. Aturan Dasar untuk SEMUA teks Arab */
-body[style*="direction: rtl"] .lang-txt {
+    /* Selector ini mendeteksi elemen yang isinya bahasa Arab */
+.lang-txt:lang(ar), 
+[data-key*="ar"] .lang-txt {
     font-family: 'Amiri', serif !important;
-    line-height: 1.8 !important;
-    text-align: right !important; /* Memastikan teks mulai dari kanan */
-}
-
-/* 2. Agar teks tidak "kabur" keluar layar, batasi containernya */
-body[style*="direction: rtl"] .container {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-}
-
-/* 3. Khusus untuk Paragraf Narasi agar tetap di tengah dan rapi */
-body[style*="direction: rtl"] p.lang-txt {
     font-size: 1.25rem !important;
-    max-width: 100%; /* Pastikan tidak melebihi lebar layar mobile */
-    text-align: justify !important; /* Rata kanan-kiri biar estetik */
-    direction: rtl;
+    line-height: 1.8 !important;
 }
 
-/* 4. Judul tetap besar tapi terkontrol */
-body[style*="direction: rtl"] h1.lang-txt {
+/* Khusus untuk judul agar tetap proporsional */
+h1.lang-txt:lang(ar) {
     font-size: 2.5rem !important;
 }
+/* Mengunci Footer agar selalu LTR dan rata kiri */
+footer, .footer-section, #main-footer {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* Jika di dalam footer ada teks yang harus tetap bisa ganti bahasa (seperti Nama Tim) */
+footer .lang-txt {
+    text-align: inherit !important; /* Mengikuti pengaturan footer, bukan body */
+}
+
 </style>
 
 <body id="page-top">
@@ -132,6 +145,18 @@ if (pilihan === 'ar') {
 const btnAktif = document.getElementById('btn-' + pilihan);
 if (btnAktif) {
     btnAktif.classList.replace('btn-outline-dark', 'btn-success');
+}
+function gantiBahasa(pilihan) {
+    // ... kode lainnya ...
+
+    const footer = document.querySelector('footer');
+    if (footer) {
+        // Footer selalu dipaksa ke kiri (LTR)
+        footer.style.direction = 'ltr';
+        footer.style.textAlign = 'left';
+    }
+    
+    localStorage.setItem('bahasaDipilih', pilihan);
 }
 }
 window.onload = function() {

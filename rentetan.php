@@ -16,7 +16,7 @@
 </section>
 
 <!-- serba-serbi -->
-<section class="projects-section bg-light" id="rentetan-kegiatan" style="padding-top: 5rem;">
+<section class="projects-section" id="rentetan-kegiatan" style="padding-top: 5rem;">
     
     <div class="container px-4 px-lg-5">
         <div class="row mb-5 justify-content-center">
@@ -324,7 +324,7 @@
 </style>
     
               <!-- Credit-->
-      <footer class="footer py-5 text-white" style="background-color: #064e3b; font-family: 'Times New Roman', serif;">
+      <footer class="footer py-5 text-white" style="background-color: #70391D; font-family: 'Times New Roman', serif;">
     <div class="container-fluid px-lg-5"> <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
                 <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; padding-bottom: 5px;">Tim Redaksi</h5>
