@@ -72,7 +72,7 @@ footer.footer strong {
                         <h2 class="text-Black mb-4 lang-txt" data-key="slogan"></h2>
                     </div>
                 </div>
-                <img class="img-fluid " src="assets/img/logo warna.jpg"style="width: 500px; height: auto;" alt="..." />
+                <img class="img-fluid " src="assets/img/lightning.png"style="width: 500px; height: auto;" alt="..." />
                  <p class= "text-Black\-50 pt-3 mb-4 lang-txt" data-key="narasi_pembuka" >
                 </p>
          </div>
@@ -82,7 +82,7 @@ footer.footer strong {
             <div class="container px-4 px-lg-5">
                 <!--1 Rentetan Kegiatan PKA Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/22 UST AMAL.jpg" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/Live Music.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4 class= "lang-txt" data-key="menu_rentetan"></h4>
@@ -96,7 +96,7 @@ footer.footer strong {
                 </div>
                  <!--Data Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/IMG_7897.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4 class= "lang-txt" data-key="menu_data"></h4>
@@ -110,7 +110,7 @@ footer.footer strong {
                 </div>
                  <!-- Acara Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/IMG_7187.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4 class="lang-txt" data-key="menu_acara"></h4>
@@ -124,7 +124,7 @@ footer.footer strong {
                 </div>
                 <!-- Serba Serbi Row-->
                 <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/bg-masthead.jpg" alt="..." /></div>
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/IMG_8293.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4 class="lang-txt" data-key="menu_serba"></h4>
@@ -179,8 +179,8 @@ footer.footer strong {
                         <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-1"><strong>Tim Penulis:</strong> Nabila Fatihatunnada, S.Pd., A'izzaty Alfatul Urfi, Dea El Syifana Qurratu'ain</p>
-                        <p class="mb-1"><strong>Tim Layout:</strong> Maghfiro Ihzani Maulania, Siti Avila Amadea, Aufa Syahma Nabila</p>
+                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alfatul Urfi, Al-Ustadzah Sri Wahyuni </p>
+                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
                     </div>
                 </div>
             </div>

@@ -16,7 +16,7 @@ $daftar_kata = [
         'menu_keluar' => 'Keluar',
         'narasiup_rentetan' => 'ini nanti isinya penjelasan umum tentang rentetan kegiatan pka! trus sampingnya foto kegiatan',
         'narasiup_data' => 'ini nanti isinya penjelasan umum tentang data pka! trus sampingnya foto kegiatan',
-        'narasiup_acara' => 'ini nanti isinya penjelasan umum tentang acara pka! trus sampingnya foto kegiatan',
+        'narasiup_acara' => 'ini nanti isinya penjelasan umum tentang acara pka HARI H! trus sampingnya foto kegiatan',
         'narasiup_serba' => 'ini nanti isinya penjelasan ya perentelan yg lain lah',
     ],
     'en' => [
@@ -33,7 +33,7 @@ $daftar_kata = [
         'menu_keluar' => 'Logout',
         'narasiup_rentetan' => 'This section will contain a general explanation of the series of PKA activities, with photos of the activities displayed alongside.',
         'narasiup_data' => 'This section will contain a general explanation of the PKA data, with photos of the activities displayed alongside.',
-        'narasiup_acara' => 'This section will contain a general explanation of the PKA events, with photos of the activities displayed alongside.',
+        'narasiup_acara' => 'This section will contain a general explanation of the PKA main day events, with photos of the activities displayed alongside.',
         'narasiup_serba' => 'This section will contain a general explanation of the various other details, with photos of the activities displayed alongside.'
     ],
     'ar' => [
@@ -49,7 +49,7 @@ $daftar_kata = [
         'menu_keluar' => 'خروج',
         'narasiup_rentetan' => 'سَيَحْتَوِي هَذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِسِلْسِلَةِ أَنْشِطَةِ PKA، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
         'narasiup_data' => 'سَيَحْتَوِي هَذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِبَيَانَاتِ PKA، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
-        'narasiup_acara' => 'سَيَحْتَوِي هَذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِلْبَرَامِجِ PKA، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
+        'narasiup_acara' => 'سَيَحْتَوِي هَذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِلْبَرَامِجِ PKA main day، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
         'narasiup_serba' => 'سَيَحْتَوِي ه   َذَا القِسْمُ عَلَى شَرْحٍ عَامٍّ لِلْتَفَاصِيلِ الأُخْرَى المُتَنَوِّعَةِ، وَتُعْرَضُ بِجَانِبِهِ صُوَرُ الأَنْشِطَةِ.',
     ]
 ];

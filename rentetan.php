@@ -33,7 +33,7 @@
         
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
             <div class="col-lg-6">
-                <img class="img-fluid w-100" src="assets/img/demo-image-01.jpg" alt="Kegiatan 1" />
+                <img class="img-fluid w-100" src="assets/img/IMG_7382.jpg" alt="Kegiatan 1" />
             </div>
             <div class="col-lg-6">
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
