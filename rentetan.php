@@ -23,7 +23,6 @@
             <div class="col-lg-11">
                 <p style="text-align: justify; color: rgba(0, 0, 0, 0.7); font-family: 'Times New Roman', serif; letter-spacing: 1px; line-height: 1.8; font-size: 18px;">
                     <strong>KEGIATAN PEKAN PERKENALAN KHUTBATU-L-'ARSY</strong><br>
-                    Pekan perkenalan khutbatu-l-'arsy merupakan salah satu sunnah Pondok Modern Darussalam Gontor yang diadakan setiap awal tahun ajaran baru di kulliyatu-l-mu'alimat al-islamiyah.
                 </p>
             </div>
         </div>
