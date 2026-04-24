@@ -32,7 +32,7 @@
         </div>
 
         <div class="col-xl-3 col-md-6 mb-3">
-            <div onclick="muatData('santriwati')" class="card text-white shadow h-100 py-2 btn-card-custom" style="cursor: pointer; background-color: #2eebeb;">
+            <div onclick="muatData('kelas')" class="card text-white shadow h-100 py-2 btn-card-custom" style="cursor: pointer; background-color: #2eebeb;">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
@@ -174,199 +174,80 @@ function muatData(jenis) {
     const judul = document.getElementById('judul-chart');
     const spinner = document.getElementById('loading-spinner');
 
-    // 1. Persiapan: Munculkan loading & sembunyikan wadah lama
     spinner.classList.remove('d-none'); 
     wadah.style.opacity = '0'; 
-    wadah.innerHTML = ""; 
 
-    setTimeout(() => {
-        // 2. PROSES PENGISIAN DATA BERDASARKAN JENIS
-        if (jenis === 'guru') {
-            judul.innerText = "Daftar Data Guru Per-Bagian";
-            wadah.innerHTML = `
-                <table class="table table-bordered table-striped">
-                    <thead class="table-dark">
-                        <tr><th>Bagian</th><th>Jumlah</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Pengasuhan</td><td>7</td></tr>
-                        <tr><td>Administrasi</td><td>5</td></tr>
-                        <tr><td>Sekertaris Wakil Pengasuh</td><td>5</td></tr>
-                        <tr><td>Pusat Data</td><td>5</td></tr>
-                        <tr><td>DRS</td><td>11</td></tr>
-                        <tr><td>KMI</td><td>7</td></tr>
-                        <tr><td>Perpustakaan</td><td>5</td></tr>
-                        <tr><td>Kebersihan dan Persepedaan</td><td>5</td></tr>
-                        <tr><td>BKSM</td><td>5</td></tr>
-                        <tr><td>Pembimbing kopel</td><td>11</td></tr>
-                        <tr><td>DCC</td><td>7</td></tr>
-                        <tr><td>Wartel Cordova</td><td>5</td></tr>
-                        <tr><td>Wartel Teheran</td><td>5</td></tr>
-                        <tr><td>Wartel Thoif</td><td>5</td></tr>
-                        <tr><td>Kesenian dan Olahraga</td><td>11</td></tr>
-                        <tr><td>Pusat Data</td><td>7</td></tr>
-                        <tr><td>Perpustakaan</td><td>5</td></tr>
-                        <tr><td>Kebersihan dan Persepedaan</td><td>5</td></tr>
-                        <tr><td>BKSM</td><td>5</td></tr>
-                        <tr><td>Pembimbing kopel</td><td>11</td></tr>
-                         <tr><td>DCC</td><td>7</td></tr>
-                        <tr><td>Wartel Cordova</td><td>5</td></tr>
-                        <tr><td>Wartel Teheran</td><td>5</td></tr>
-                        <tr><td>Wartel Thoif</td><td>5</td></tr>
-                        <tr><td>Kesenian dan Olahraga</td><td>11</td></tr>
-                        <tr><td>Pusat Data</td><td>7</td></tr>
-                        <tr><td>Perpustakaan</td><td>5</td></tr>
-                        <tr><td>Kebersihan dan Persepedaan</td><td>5</td></tr>
-                        <tr><td>BKSM</td><td>5</td></tr>
-                        <tr><td>Pembimbing kopel</td><td>11</td></tr>
-                        <tr><td>DCC</td><td>7</td></tr>
-                        <tr><td>Wartel Cordova</td><td>5</td></tr>
-                        <tr><td>Wartel Teheran</td><td>5</td></tr>
-                        <tr><td>Wartel Thoif</td><td>5</td></tr>
-                        <tr><td>Kesenian dan Olahraga</td><td>11</td></tr>
-                        <tr><td>Pusat Data</td><td>7</td></tr>
-                        <tr><td>Perpustakaan</td><td>5</td></tr>
-                        <tr><td>Kebersihan dan Persepedaan</td><td>5</td></tr>
-                        <tr><td>BKSM</td><td>5</td></tr>
-                        <tr><td>Pembimbing kopel</td><td>11</td></tr>
-                        <tr><td>BKSM</td><td>5</td></tr>
-                        <tr><td>Pembimbing kopel</td><td>11</td></tr>
-                    </tbody>
-                </table>`;
+    fetch(`ambil_csv.php?jenis=${jenis}`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.length === 0) {
+                wadah.innerHTML = "<div class='alert alert-warning'>File tidak ditemukan.</div>";
+            } else {
+                let html = `<div class="table-responsive">
+                    <table class="table table-bordered align-middle text-center" style="font-size: 14px; border: 1px solid #dee2e6;">`;
+                
+                // --- LOGIKA ROWSPAN OTOMATIS ---
+                let rowSpanMap = []; // Untuk mencatat baris mana yang harus di-merge
 
-        } 
-        
-        else if (jenis === 'santriwati') {
-            judul.innerText = "Jumlah Rekapitulasi Santri Per-Kelas";
-            wadah.innerHTML = `
-                <div class="table-responsive">
-                    <table class="table table-bordered table-dark text-center align-middle;">
-                        <thead>
-                            <tr>
-                                <th rowspan="2">Kelas</th>
-                                <th colspan="17">Alfabet</th>
-                                <th rowspan="2">Jumlah</th>
-                            </tr>
-                            <tr>
-                                <th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th><th>P</th><th>Q</th><th>R</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="fw-bold">1</td>
-                                <td>19</td><td>19</td><td>19</td><td>17</td><td>22</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                                <td class="fw-bold">96</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">1 Int</td>
-                                <td>12</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                                <td class="fw-bold">12</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">2</td>
-                                <td>21</td><td>21</td><td>21</td><td>21</td><td>22</td><td>22</td><td>22</td><td>21</td><td>22</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                                <td class="fw-bold">193</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">3</td>
-                                <td>21</td><td>21</td><td>21</td><td>20</td><td>19</td><td>18</td><td>21</td><td>21</td><td>21</td><td>21</td><td>20</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                                <td class="fw-bold">224</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">3 Int</td>
-                                <td>21</td><td>21</td><td>20</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                                <td class="fw-bold">62</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">4</td>
-                                <td>24</td><td>24</td><td>24</td><td>23</td><td>23</td><td>22</td><td>23</td><td>22</td><td>23</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                                <td class="fw-bold">208</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">5</td>
-                                <td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>23</td><td>22</td><td>20</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
-                                <td class="fw-bold">249</td>
-                            </tr>
-                            <tr>
-                                <td class="fw-bold">6</td>
-                                <td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>31</td><td>30</td><td>-</td><td>-</td>
-                                <td class="fw-bold">464</td>
-                            </tr>
-                            <tr style="background-color: #343a40; font-weight: bold;">
-                                <td colspan="18" class="text-center">TOTAL</td> <td style="color: #ffc107;">1508</td> 
-                            </tr>
+                data.forEach((row, rowIndex) => {
+                    if (rowIndex === 0) {
+                        html += `<thead class="table-dark"><tr>`;
+                        row.forEach(cell => { html += `<th class="text-center">${cell}</th>`; });
+                        html += `</tr></thead><tbody>`;
+                    } else {
+                        const isTotalRow = row[0] && row[0].toString().toUpperCase().includes("TOTAL");
 
-                        </tbody>
-                    </table>
-                </div>`;
+                        if (isTotalRow) {
+                            let jmlCol = row.length;
+                            const totalValue = row[jmlCol - 2] || row[jmlCol - 1]; // Mengambil angka total
+                            html += `<tr class="table-secondary fw-bold">
+                                        <td colspan="${jmlCol - 1}" class="text-center">TOTAL</td>
+                                        <td>${totalValue}</td>
+                                     </tr>`;
+                        } else {
+                            html += `<tr>`;
+                            row.forEach((cell, colIndex) => {
+                                let content = cell ? cell.trim() : "";
 
-        } else if (jenis === 'konsulat') {
-            judul.innerText = "Data Konsulat Santriwati";
-            wadah.innerHTML = `
-                <table class="table table-bordered table-striped">
-                    <thead class="table-dark">
-                        <tr><th>No</th><th>Nama Konsulat</th><th>Jumlah Santri</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                        <tr><td>1</td><td>Konsulat Jakarta</td><td>150</td></tr>
-                        <tr><td>2</td><td>Konsulat Surabaya</td><td>120</td></tr>
-                    </tbody>
-                </table>`;
-        }
-        else if (jenis === 'panitiaguru') {
-            judul.innerText = "Data Panitia PKA guru";
-            wadah.innerHTML = `
-                <table class="table table-bordered table-striped">
-                    <thead class="table-dark">
-                        <tr><th>No</th><th>Bagian</th><th>Jumlah</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>1</td><td>Ketua</td><td>6</td></tr>
-                        <tr><td>2</td><td>Sekertaris</td><td>7</td></tr>
-                    </tbody>
-                </table>`;
-        }
+                                // Hanya lakukan auto-merge untuk 2 kolom pertama (No dan Room/Nama)
+                                if (colIndex < 2 && (content === "" || content === "-")) {
+                                    return; // Lewati karena akan dihandle oleh rowspan sel di atasnya
+                                }
 
-        // 3. Selesai: Sembunyikan loading & munculkan tabel dengan halus
-        spinner.classList.add('d-none');
-        wadah.style.transition = "opacity 0.5s";
-        wadah.style.opacity = '1';
+                                // Hitung berapa baris ke bawah yang kosong untuk kolom ini
+                                let rowspan = 1;
+                                if (colIndex < 2 && content !== "") {
+                                    for (let i = rowIndex + 1; i < data.length; i++) {
+                                        let nextCell = data[i][colIndex] ? data[i][colIndex].trim() : "";
+                                        if (nextCell === "" || nextCell === "-") {
+                                            rowspan++;
+                                        } else {
+                                            break;
+                                        }
+                                    }
+                                }
 
-    }, 500); // Delay 0.5 detik biar ada efek loadingnya
+                                if (rowspan > 1) {
+                                    html += `<td rowspan="${rowspan}" class="fw-bold bg-light">${content}</td>`;
+                                } else {
+                                    html += `<td>${content}</td>`;
+                                }
+                            });
+                            html += `</tr>`;
+                        }
+                    }
+                });
+
+                html += `</tbody></table></div>`;
+                wadah.innerHTML = html;
+            }
+
+            const namaMenu = { 'guru': 'Data Guru Per-Bagian', 'santriwati': 'Rekapitulasi Santriwati', 'konsulat': 'Data Konsulat' };
+            judul.innerText = namaMenu[jenis] || "Data Tabel";
+            spinner.classList.add('d-none');
+            wadah.style.opacity = '1';
+        });
 }
-// Biar pas buka halaman, data Guru langsung muncul otomatis
-window.onload = function() {
-    muatData('guru');
-};
-
 </script>
  <!-- Credit-->
       <footer class="footer py-5 text-white" style="background-color: #70391D; font-family: 'Times New Roman', serif;">

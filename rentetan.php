@@ -38,12 +38,16 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white">Apel Tahunan</h4>
-                            <p class="mb-0 text-white-50">Penjelasan umum mengenai kegiatan apel tahunan di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_rentetan"></h4>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a href="index.php?halaman=apel_tahunan" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasiup_rentetan"></p>
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -308,17 +312,26 @@
    /* Animasi Panah Maju Mundur */
 .animasi-panah {
     display: inline-block;
-    animation: bounceRight 3s infinite;
+    animation: bounceUp 3s infinite;
 }
 
-@keyframes bounceRight {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(10px); } /* Jarak geraknya */
+@keyframes bounceUp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Jarak geraknya */
 }
 
 /* Efek saat tombol disentuh (Hover) */
 .tombol-gerak:hover i {
     color: #0de9ae !important; /* Berubah warna pas di-hover */
+}
+.collapse {
+    transition: all 0.4s ease-in-out;
+}
+
+.card-body {
+    backdrop-filter: blur(5px); /* Efek kaca agar senada dengan desainmu */
+    border-radius: 10px;
+    color: #000;
 }
 </style>
     
