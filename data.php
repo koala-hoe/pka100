@@ -4,15 +4,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<section class="about-section" id="about" style="background-color: #0de9ae; padding: 150px 0 100px 0; text-align: center;">
-    <div class="container">
-        <h2 style="color: white; margin-bottom: 20px; font-family: 'Times New Roman', serif; text-transform: uppercase; letter-spacing: 2px;">Rentetan Kegiatan PKA</h2>
-        <p style="color: rgba(255,255,255,0.7); font-family: 'Times New Roman', serif;">
-            Sabtu, 14 oktober 2026 <br>
-            PMDG Putri Kampus 3
-        </p>
-    </div>
-</section>
+<style>
+        /* CSS Header & Background */
+        .masthead {
+            min-height: 60vh; /* Tinggi header disesuaikan */
+            background: url("assets/img/BANNER WEB.png") !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            background-size: cover !important;
+        }
+</style>
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        </div>
 
 <div class="container-fluid px-5 mt-5">
     <!-- first row button -->
@@ -103,12 +108,12 @@
             </div>
         </div>
          <div class="col-xl-3 col-md-6 mb-3">
-            <div onclick="muatData('konsulat')" class="card text-white shadow h-100 py-2 btn-card-custom" style="cursor: pointer; background-color: #281aa7;">
+            <div onclick="muatData('jumlahpeserta')" class="card text-white shadow h-100 py-2 btn-card-custom" style="cursor: pointer; background-color: #281aa7;">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-uppercase mb-1">Data Konsulat Santriwati</div>
-                            <div class="h5 mb-0 font-weight-bold">30 Konsulat</div>
+                            <div class="text-xs font-weight-bold text-uppercase mb-1">Data Peserta Acara</div>
+                            <div class="h5 mb-0 font-weight-bold">6 Kriteria</div>
                         </div>
                         <div class="col-auto"><i class="fas fa-users fa-2x text-white-50"></i></div>
                     </div>

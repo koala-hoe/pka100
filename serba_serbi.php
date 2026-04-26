@@ -106,6 +106,25 @@
     </div>
 </div>
 
+<div class="row mt-5">
+    <div class="col-lg-4 col-md-6 item-serba">
+        <img src="assets/img/DESIGN DALAM QOAH.jpeg" class="img-serba"
+             style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
+        <p class="caption-serba">Desain Dalam Auditorium</p>
+    </div>
+
+    <div class="col-lg-4 col-md-6 item-serba">
+        <img src="assets/img/CATALYST.jpg" class="img-serba"
+             style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
+        <p class="caption-serba">Formasi Bendera</p>
+    </div>
+
+    <div class="col-lg-4 col-md-6 item-serba">
+        <img src="assets/img/maket.jpeg" class="img-serba"
+             style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
+        <p class="caption-serba">Maket</p>
+    </div>
+</div>
 <script>
 function tampilkanGambar(linkBaru) {
     const layar = document.getElementById('layarUtama');

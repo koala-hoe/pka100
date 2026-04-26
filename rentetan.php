@@ -5,77 +5,216 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
-<section class="about-section" id="about" style="background-color: #0de9ae; padding: 150px 0 100px 0; text-align: center;">
-               <div class="container">
-        <h2 style="color: white; margin-bottom: 20px; font-family: 'Times New Roman', serif; text-transform: uppercase; letter-spacing: 2px;">Rentetan Kegiatan PKA</h2>
-        <p style="color: rgba(255,255,255,0.7); font-family: 'Times New Roman', serif;">
-            Sabtu, 14 Februari 2026 <br>
-            Gontor Putri Kampus 3
-        </p>
-    </div>
-</section>
+<style>
+        /* CSS Header & Background */
+        .masthead {
+            min-height: 60vh; /* Tinggi header disesuaikan */
+            background: url("assets/img/BANNER WEB.png") !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            background-size: cover !important;
+        }
+</style>
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        </div>
+
+
 
 <!-- serba-serbi -->
 <section class="projects-section" id="rentetan-kegiatan" style="padding-top: 5rem;">
-    
-    <div class="container px-4 px-lg-5">
-        <div class="row mb-5 justify-content-center">
-            <div class="col-lg-11">
-                <p style="text-align: justify; color: rgba(0, 0, 0, 0.7); font-family: 'Times New Roman', serif; letter-spacing: 1px; line-height: 1.8; font-size: 18px;">
-                    <strong>KEGIATAN PEKAN PERKENALAN KHUTBATU-L-'ARSY</strong><br>
-                </p>
+
+<!-- table kegiatan -->
+    <div class="container-fluid p-0"> 
+
+        <div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-11 text-center">
+            <a class="btn btn-lg w-100 mb-2 tombol-gerak" data-bs-toggle="collapse" href="#tabelJadwal" 
+               style="background-color: #064e3b; color: white; border-radius: 10px; font-family: 'Times New Roman', serif;">
+               <i class="fa-solid fa-calendar-days me-2"></i> LIHAT JADWAL LENGKAP KEPANITIAAN
+               <br>
+               <i class="fa-solid fa-chevron-down animasi-panah mt-2"></i>
+            </a>
+
+            <div class="collapse mt-3" id="tabelJadwal">
+                <div class="table-responsive shadow-lg" style="border-radius: 15px; overflow: hidden;">
+                    <table class="table table-bordered table-hover bg-white mb-0" style="font-family: 'Times New Roman', serif;">
+                        <thead class="text-white" style="background-color: #064e3b;">
+                            <tr>
+                                <th style="width: 5%">No</th>
+                                <th style="width: 20%">Hari / Tanggal</th>
+                                <th style="width: 45%">Kegiatan</th>
+                                <th style="width: 15%">Tempat</th>
+                                <th style="width: 15%">Waktu</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-size: 14px;" class="text-start">
+                            <tr>
+                                <td class="text-center">1</td>
+                                <td>Selasa, 21 April 2026</td>
+                                <td>Geladi bersama panitia (Tari Kombinasi dan Tari Saman), Paskibra + Pleton</td>
+                                <td>Lapangan Hijau</td>
+                                <td>14.00 & 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2</td>
+                                <td>Rabu, 22 April 2026</td>
+                                <td>Geladi bersama panitia (Rebana + Angklung), Rentetan Lomba Cerdas Cermat, Paskibra + Pleton, Geladi Petugas Upacara bersama panitia</td>
+                                <td>Lapangan Hijau & Masjid</td>
+                                <td>14.00, 16.00, 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">3</td>
+                                <td>Kamis, 23 April 2026</td>
+                                <td>Geladi ke-2 bersama panitia (Upacara + LKBB Konsulat), Tari Kombinasi + Tari Saman, Rebana + Angklung, Paskibra + Pleton</td>
+                                <td>Lapangan Hijau</td>
+                                <td>14.00, 16.00, 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">4</td>
+                                <td>Jum'at, 24 April 2026</td>
+                                <td>Geladi atraksi bersama panitia (all), Fitting lapangan Paskibra + Pleton, Rentetan Single song, Live Music, Poetry reading dan fashion show</td>
+                                <td>Lapangan Hijau & Auditorium</td>
+                                <td>09.00, 14.00, 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">5</td>
+                                <td>Sabtu, 25 April 2026</td>
+                                <td>Geladi kotor bersama asatidz (full Atraksi PKA), Geladi Petugas Upacara (Paskibra + Pleton)</td>
+                                <td>Lapangan Hijau</td>
+                                <td>14.00 & 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">6</td>
+                                <td>Ahad, 26 April 2026</td>
+                                <td>PKA Gontor Pusat (Pagi), Tari Kombinasi + Tari Saman, Rebana + Angklung, Rentetan Tari Kombinasi antar angkatan</td>
+                                <td>Gontor, Lap. Hijau, Auditorium</td>
+                                <td>Pagi, 14.00, 16.00, 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">7</td>
+                                <td>Senin, 27 April 2026</td>
+                                <td>Geladi kotor bersama asatidz (full Atraksi PKA), Paskibra + Pleton</td>
+                                <td>Lapangan Hijau</td>
+                                <td>14.00 & 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">8</td>
+                                <td>Selasa, 28 April 2026</td>
+                                <td>Geladi kotor ke-2 bersama asatidz (Upacara + LKBB konsulat), Geladi atraksi bersama panitia (Rebana + Angklung)</td>
+                                <td>Lapangan Hijau</td>
+                                <td>14.00 & 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">9</td>
+                                <td>Rabu, 29 April 2026</td>
+                                <td>Geladi atraksi bersama panitia (Tari Kombinasi + Tari Saman), Geladi Petugas Upacara (Paskibra + Pleton)</td>
+                                <td>Lapangan Hijau</td>
+                                <td>14.00 & 20.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">10</td>
+                                <td>Kamis, 30 April 2026</td>
+                                <td>Geladi kotor ke-2 bersama asatidz (apel + atraksi)</td>
+                                <td>Lapangan Hijau</td>
+                                <td>07.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">11</td>
+                                <td>Jum'at, 1 Mei 2026</td>
+                                <td>Geladi bersih PKA Gontor Putri 3</td>
+                                <td>Lapangan Hijau</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">12</td>
+                                <td>Sabtu, 2 Mei 2026</td>
+                                <td>Geladi suci PKA Gontor Putri 3</td>
+                                <td>Lapangan Hijau</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">13</td>
+                                <td>Ahad, 3 Mei 2026</td>
+                                <td>PKA Gontor Putri 1, Fitting Lapangan all atraksi</td>
+                                <td>Gontor Putri 1 & Lap. Hijau</td>
+                                <td>14.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">14</td>
+                                <td>Senin, 4 Mei 2026</td>
+                                <td>Hari tenang PKA Gontor Putri 3</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">15</td>
+                                <td>Selasa, 5 Mei 2026</td>
+                                <td>Apel Tahunan Gontor Putri 3</td>
+                                <td>Lapangan Hijau</td>
+                                <td>07.00 WIB</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-2 text-muted small text-start">*Data berdasarkan Kalender PKA 2026</div>
             </div>
         </div>
     </div>
-<!-- table kegiatan -->
-    <div class="container-fluid p-0"> 
+</div>
         
-        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
-            <div class="col-lg-6">
-                <img class="img-fluid w-100" src="assets/img/IMG_7382.jpg" alt="Kegiatan 1" />
-            </div>
-            <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #064e3b;">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white lang-txt" data-key="menu_ApelTahunan"></h4>
-                            <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
-                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
-                            </a>
-                            <div class="collapse" id="detailRentetan">
-                             <div class="mt-3 p-3 border-top">
+       <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
+    <div class="col-lg-6">
+        <img class="img-fluid w-100" src="assets/img/IMG_7382.jpg" alt="Kegiatan 1" />
+    </div>
+    <div class="col-lg-6">
+        <div class="text-center h-100 project" style="background-color: #064e3b;">
+            <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left p-5">
+                    <h4 class="text-white lang-txt" data-key="menu_ApelTahunan"></h4>
+                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                    
+                    <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailApel">
+                        <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
+                    </a>
+
+                    <div class="collapse" id="detailApel">
+                        <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_ApelTahunan"></p>
                         </div>
-                        </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
         <div class="row gx-0 justify-content-center align-items-center">
-            <div class="col-lg-6">
-                <img class="img-fluid w-100" src="assets/img/demo-image-02.jpg" alt="Kegiatan 2" />
-            </div>
-            <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #064e3b;">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-right p-5">
-                           <h4 class="text-white lang-txt" data-key="menu_KuliahUmum"></h4>
-                            <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
-                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
-                            </a>
-                            <div class="collapse" id="detailRentetan">
-                             <div class="mt-3 p-3 border-top">
+    <div class="col-lg-6">
+        <img class="img-fluid w-100" src="assets/img/demo-image-02.jpg" alt="Kegiatan 2" />
+    </div>
+    <div class="col-lg-6 order-lg-first">
+        <div class="text-center h-100 project" style="background-color: #064e3b;">
+            <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right p-5">
+                    <h4 class="text-white lang-txt" data-key="menu_KuliahUmum"></h4>
+                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                    
+                    <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailKuliah">
+                        <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
+                    </a>
+
+                    <div class="collapse" id="detailKuliah">
+                        <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_KuliahUmum"></p>
                         </div>
-                        </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
             <div class="col-lg-6">
@@ -87,10 +226,10 @@
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_LatihanLKBB"></h4>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#latihanLKBB">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="latihanLKBB">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_LatihanLKBB"></p>
                         </div>
@@ -110,10 +249,10 @@
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_POD"></h4>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailPOD">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="detailPOD">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_POD"></p>
                         </div>
@@ -134,10 +273,10 @@
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_LatihanOhpondokku"></h4>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailLatihanOhpondokku">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="detailLatihanOhpondokku">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_LatihanOhpondokku"></p>
                         </div>
@@ -157,9 +296,14 @@
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_LombaCCA"></h4>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailLombaCCA">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailLombaCCA">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_LombaCCA"></p>
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -175,15 +319,20 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_HadrahAngkatan"></h4>
-                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_HadrahAngkatan"></p>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailHadrahAngkatan">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailHadrahAngkatan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_HadrahAngkatan"></p>
+                        
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
         <div class="row gx-0 justify-content-center align-items-center">
             <div class="col-lg-6">
@@ -194,15 +343,19 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_LombaLKBB"></h4>
-                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_LombaLKBB"></p>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailLombaLKBB">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailLombaLKBB">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_LombaLKBB"></p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        </div>
         </div>
 
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
@@ -214,12 +367,11 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_SingleSong"></h4>
-                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_SingleSong"></p>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailSingleSong">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="detailSingleSong">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_SingleSong"></p>
                         </div>
@@ -238,12 +390,11 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_LiveMusic"></h4>
-                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_LiveMusic"></p>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailLiveMusic">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="detailLiveMusic">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_LiveMusic"></p>
                         </div>
@@ -262,13 +413,12 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white lang-txt" data-key="menu_AnekaRiaNusantara"></h4>
-                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_ARN"></p>
+                            <h4 class="text-white lang-txt" data-key="menu_ARN"></h4>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailARN">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="detailARN">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_ARN"></p>
                         </div>
@@ -287,12 +437,11 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_PembagianHadiah"></h4>
-                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_PembagianHadiah"></p>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailPembagianHadiah">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="detailPembagianHadiah">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_PembagianHadiah"></p>
                         </div>
@@ -312,12 +461,11 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_DA"></h4>
-                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_DA"></p>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                           <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                           <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailDA">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="detailDA">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_DA"></p>
                         </div>
@@ -336,12 +484,11 @@
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_PG"></h4>
-                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_PG"></p>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                            <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailPG">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
-                            <div class="collapse" id="detailRentetan">
+                            <div class="collapse" id="detailPG">
                              <div class="mt-3 p-3 border-top">
                             <p class="text-white-50 mb-3 lang-txt" data-key="narasi_PG"></p>
                         </div>

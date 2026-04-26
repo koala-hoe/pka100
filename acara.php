@@ -4,18 +4,21 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<style>
+        /* CSS Header & Background */
+        .masthead {
+            min-height: 60vh; /* Tinggi header disesuaikan */
+            background: url("assets/img/BANNER WEB.png") !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-attachment: scroll !important;
+            background-size: cover !important;
+        }
+</style>
 <header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        <div class="d-flex justify-content-center">
-            <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">PEKAN PERKENALAN</h1>
-                <h1 class="mx-auto my-0 text-uppercase mb-5">KHUTBATU-L-'ARSY</h1> 
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">"Gontor Berkomitmen Menanamkan Nilai-Nilai Islam"</h2>
-               
-            </div> 
         </div>
-    </div>
-</header>
+
 
 <section class="Menu-section text-center pt-5" id="Menu"> 
     <div class="container px-4 px-lg-5 mt-5">

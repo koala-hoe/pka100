@@ -79,7 +79,7 @@
 
     <header class="masthead">
         <div class="wrap-tombol">
-            <a class="btn btn-primary px-5 py-3 tombol-gerak" href="index.php?akses=masuk">
+            <a class="btn px-5 py-3 tombol-gerak" href="index.php?akses=masuk"style="background-color: #064e3b; color: white; border-radius: 10px; font-family: 'Times New Roman', serif;">
                 BERANDA
             </a>
         </div>
