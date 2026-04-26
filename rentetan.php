@@ -38,14 +38,14 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white lang-txt" data-key="menu_rentetan"></h4>
+                            <h4 class="text-white lang-txt" data-key="menu_ApelTahunan"></h4>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
                              <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
                             <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
                             <div class="collapse" id="detailRentetan">
                              <div class="mt-3 p-3 border-top">
-                            <p class="text-white-50 mb-3 lang-txt" data-key="narasiup_rentetan"></p>
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_ApelTahunan"></p>
                         </div>
                         </div>
                         </div>
@@ -61,11 +61,104 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
-                            <h4 class="text-white">Kuliah Umum</h4>
-                            <p class="mb-0 text-white-50">Penjelasan umum mengenai kegiatan kuliah umum di sini.</p>
+                           <h4 class="text-white lang-txt" data-key="menu_KuliahUmum"></h4>
+                            <hr class="d-none d-lg-block mb-0 ms-0" />
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
+                            </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_KuliahUmum"></p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid w-100" src="assets/img/demo-image-01.jpg" alt="Kegiatan 1" />
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center h-100 project"style="background-color: #064e3b;">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left p-5">
+                            <h4 class="text-white lang-txt" data-key="menu_LatihanLKBB"></h4>
+                            <hr class="d-none d-lg-block mb-0 ms-0" />
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
+                            </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_LatihanLKBB"></p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-0 justify-content-center align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid w-100" src="assets/img/demo-image-02.jpg" alt="Kegiatan 2" />
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="text-center h-100 project"style="background-color: #064e3b;">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right p-5">
+                            <h4 class="text-white lang-txt" data-key="menu_POD"></h4>
+                            <hr class="d-none d-lg-block mb-0 ms-0" />
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
+                            </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_POD"></p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid w-100" src="assets/img/demo-image-01.jpg" alt="Kegiatan 1" />
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center h-100 project"style="background-color: #064e3b;">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left p-5">
+                            <h4 class="text-white lang-txt" data-key="menu_LatihanOhpondokku"></h4>
+                            <hr class="d-none d-lg-block mb-0 ms-0" />
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
+                            </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_LatihanOhpondokku"></p>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-0 justify-content-center align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid w-100" src="assets/img/demo-image-02.jpg" alt="Kegiatan 2" />
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="text-center h-100 project"style="background-color: #064e3b;">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right p-5">
+                            <h4 class="text-white lang-txt" data-key="menu_LombaCCA"></h4>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a href="index.php?halaman=kuliah_umum" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
                         </div>
                     </div>
@@ -81,11 +174,11 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white">Latihan Ketangkasan Baris-Berbaris</h4>
-                            <p class="mb-0 text-white-50">Penjelasan umum mengenai kegiatan Latihan ketangkasan baris-berbaris di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_HadrahAngkatan"></h4>
+                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_HadrahAngkatan"></p>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                            <a href="index.php?halaman=latihan_baris" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
                         </div>
                     </div>
@@ -100,11 +193,11 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
-                            <h4 class="text-white">Pekan Olahraga dan Seni</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan kedua di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_LombaLKBB"></h4>
+                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_LombaLKBB"></p>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a href="index.php?halaman=PORSENI" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
                         </div>
                     </div>
@@ -120,12 +213,17 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white">Latihan Menyanyi Hymne Oh Pondokku</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan pertama di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_SingleSong"></h4>
+                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_SingleSong"></p>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                            <a href="index.php?halaman=oh_pondokku" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_SingleSong"></p>
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -139,12 +237,17 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
-                            <h4 class="text-white">Lomba Cerdas Cermat</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan kedua di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_LiveMusic"></h4>
+                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_LiveMusic"></p>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a href="index.php?halaman=CCA" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_LiveMusic"></p>
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -159,12 +262,17 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white">Hadrah Antar Angkatan</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan pertama di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_AnekaRiaNusantara"></h4>
+                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_ARN"></p>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a href="index.php?halaman=hadrah" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_ARN"></p>
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -178,12 +286,17 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
-                            <h4 class="text-white">Lomba Ketangkasan Baris-berbaris</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan kedua di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_PembagianHadiah"></h4>
+                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_PembagianHadiah"></p>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a href="index.php?halaman=lomba_baris" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                             <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_PembagianHadiah"></p>
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -198,12 +311,17 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white">Single Song</h4>
-                            <p class="mb-0 text-white-50">Penjelasan umum mengenai kegiatan Single Song di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_DA"></h4>
+                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_DA"></p>
                             <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a href="index.php?halaman=single_song" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                           <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_DA"></p>
+                        </div>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -217,90 +335,17 @@
                 <div class="text-center h-100 project"style="background-color: #064e3b;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
-                            <h4 class="text-white">Live Music</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan kedua di sini.</p>
+                            <h4 class="text-white lang-txt" data-key="menu_PG"></h4>
+                            <p class="mb-0 text-white-50 lang-txt" data-key="narasi_PG"></p>
                             <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a href="index.php?halaman=live_music" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
+                            <a class="tombol-gerak" data-bs-toggle="collapse" href="#detailRentetan">
+                            <i class="fa-solid fa-chevron-down text-white animasi-panah"></i>
                             </a>
+                            <div class="collapse" id="detailRentetan">
+                             <div class="mt-3 p-3 border-top">
+                            <p class="text-white-50 mb-3 lang-txt" data-key="narasi_PG"></p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
-            <div class="col-lg-6">
-                <img class="img-fluid w-100" src="assets/img/demo-image-01.jpg" alt="Kegiatan 1" />
-            </div>
-            <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #064e3b;">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white">Aneka Ria Nusantara</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan pertama di sini.</p>
-                            <hr class="d-none d-lg-block mb-0 ms-0" />
-                             <a href="index.php?halaman=aneka_nusantara" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
-                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row gx-0 justify-content-center align-items-center">
-            <div class="col-lg-6">
-                <img class="img-fluid w-100" src="assets/img/demo-image-02.jpg" alt="Kegiatan 2" />
-            </div>
-            <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #064e3b;">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-right p-5">
-                            <h4 class="text-white">Pembagian Hadiah</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan kedua di sini.</p>
-                            <hr class="d-none d-lg-block mb-0 me-0" />
-                             <a href="index.php?halaman=pembagian_hadiah" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
-            <div class="col-lg-6">
-                <img class="img-fluid w-100" src="assets/img/demo-image-01.jpg" alt="Kegiatan 1" />
-            </div>
-            <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #064e3b;">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-left p-5">
-                            <h4 class="text-white">Drama Arena</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan pertama di sini.</p>
-                            <hr class="d-none d-lg-block mb-0 ms-0" />
-                           <a href="index.php?halaman=DA" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row gx-0 justify-content-center align-items-center">
-            <div class="col-lg-6">
-                <img class="img-fluid w-100" src="assets/img/demo-image-02.jpg" alt="Kegiatan 2" />
-            </div>
-            <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #064e3b;">
-                    <div class="d-flex h-100">
-                        <div class="project-text w-100 my-auto text-center text-lg-right p-5">
-                            <h4 class="text-white">Panggung Gembira</h4>
-                            <p class="mb-0 text-white-50">Penjelasan mengenai kegiatan kedua di sini.</p>
-                            <hr class="d-none d-lg-block mb-0 me-0" />
-                            <a href="index.php?halaman=PG" class="tombol-gerak">
-                            <i class="fa-solid fa-chevron-right text-white animasi-panah"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -347,8 +392,8 @@
                         <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-1"><strong>Tim Penulis:</strong> Nabila Fatihatunnada, S.Pd., A'izzaty Alfatul Urfi, Dea El Syifana Qurratu'ain</p>
-                        <p class="mb-1"><strong>Tim Layout:</strong> Maghfiro Ihzani Maulania, Siti Avila Amadea, Aufa Syahma Nabila</p>
+                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alfatul Urfi, Al-Ustadzah Sri Wahyuni </p>
+                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
                     </div>
                 </div>
             </div>

@@ -1,8 +1,7 @@
 
 <style>
     .masthead {
-        background: linear-gradient(to bottom, hsla(0, 100%, 96%, 0.30) 0%, #cfb068 75%, #D3A63F 100%), 
-                    url("assets/img/test-bg.jpg") !important;
+        background:url("assets/img/BANNER WEB.png") !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
         background-attachment: scroll !important;
@@ -56,10 +55,6 @@ footer.footer strong {
 <header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
-            <div class="text-center">
-                <h1 class="lang-txt" data-key="judul_1"></h1>
-                <h1 class="lang-txt" data-key="judul_2"></h1>
-            <h2 class="text-white-50 lang-txt" data-key="slogan"></h2>
             </div> 
         </div>
     </div>

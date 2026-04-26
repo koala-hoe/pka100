@@ -249,7 +249,7 @@ function muatData(jenis) {
         });
 }
 </script>
- <!-- Credit-->
+<!-- Credit-->
       <footer class="footer py-5 text-white" style="background-color: #70391D; font-family: 'Times New Roman', serif;">
     <div class="container-fluid px-lg-5"> <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
@@ -261,8 +261,8 @@ function muatData(jenis) {
                         <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-1"><strong>Tim Penulis:</strong> Nabila Fatihatunnada, S.Pd., A'izzaty Alfatul Urfi, Dea El Syifana Qurratu'ain</p>
-                        <p class="mb-1"><strong>Tim Layout:</strong> Maghfiro Ihzani Maulania, Siti Avila Amadea, Aufa Syahma Nabila</p>
+                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alfatul Urfi, Al-Ustadzah Sri Wahyuni </p>
+                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
                     </div>
                 </div>
             </div>
