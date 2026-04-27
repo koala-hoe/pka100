@@ -14,12 +14,66 @@
             background-attachment: scroll !important;
             background-size: cover !important;
         }
+        .zoom-peta {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.zoom-peta:hover {
+    transform: scale(1.02); /* Sedikit membesar saat hover */
+}
 </style>
 <header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         </div>
 
 <div class="container-fluid px-5 mt-5">
+
+<div class="row mb-4">
+        <div class="col-12">
+            <div class="accordion" id="accordionPeta">
+                <div class="accordion-item shadow border-0">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed fw-bold text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePeta" aria-expanded="false" aria-controls="collapsePeta" style="background-color: #70391D;">
+                            <i class="fas fa-map-marked-alt me-2"></i> LIHAT PETA KAMPUS & DESKRIPSI
+                        </button>
+                    </h2>
+                    <div id="collapsePeta" class="accordion-collapse collapse" data-bs-parent="#accordionPeta">
+                        <div class="accordion-body bg-white">
+                            <div class="row align-items-start">
+                                <div class="col-lg-7 mb-3 text-center">
+                                    <img src="assets/img/denahkampus.jpg" class="img-fluid rounded shadow-sm" alt="Peta Kampus">
+                                </div>
+                                <div class="col-lg-5" style="max-height: 500px; overflow-y: auto; font-family: 'Times New Roman', serif; font-size: 0.95rem;">
+                                    <h5 class="border-bottom pb-2 mb-3">Keterangan Denah:</h5>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li>1. Rumah Baru</li>
+                                                <li>2. Perkantoran</li>
+                                                <li>3. Dapur La Tansa</li>
+                                                <li>4. Bapenta</li>
+                                                <li>5. Wisma</li>
+                                                <li>...</li> <li>22. Laundry</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="list-unstyled">
+                                                <li>23. Gedung Baghdad</li>
+                                                <li>24. MARIKORI</li>
+                                                <li>25. Tempat Wudhu</li>
+                                                <li>...</li> <li>44. Kantor Panitia 100 Thn</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- first row button -->
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-3">

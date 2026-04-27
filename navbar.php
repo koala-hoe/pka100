@@ -66,7 +66,7 @@
             </button>
         <?php endif; ?>
 
-        <a class="navbar-brand fw-bold">GUIDEBOOK PKA</a>
+        <a class="navbar-brand fw-bold">EVENTBOOK PKA</a>
         
     </div>
     <div class="ms-auto d-flex">
