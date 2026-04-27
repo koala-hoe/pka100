@@ -72,6 +72,51 @@
             font-size: 2.5rem !important;
         }
 
+        /* Mobile Optimization */
+        @media (max-width: 576px) {
+            #mainNav .navbar-brand {
+                font-size: 14px !important;
+                letter-spacing: 1px !important;
+            }
+
+            .btn-bahasa {
+                padding: 0.3rem 0.6rem !important;
+                font-size: 10px !important;
+            }
+
+            #btn-sidebar-toggle {
+                padding: 0.4rem 0.7rem !important;
+            }
+
+            .masthead-beranda,
+            .masthead-acara,
+            .masthead-data,
+            .masthead-rentetan,
+            .masthead-serba {
+                min-height: 200px !important;
+            }
+
+            .container-fluid {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+
+        @media (max-width: 375px) {
+            #mainNav .navbar-brand {
+                font-size: 12px !important;
+            }
+
+            .btn-bahasa {
+                padding: 0.2rem 0.4rem !important;
+                margin-right: 1px !important;
+            }
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
         footer,
         .footer-section,
         #main-footer {
@@ -144,20 +189,23 @@
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container-fluid px-4 px-lg-5 d-flex align-items-center">
-                <button id="btn-sidebar-toggle" class="btn btn-dark me-3" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#sidebarPKA">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <a class="navbar-brand fw-bold">EVENTBOOK PKA</a>
-            </div>
-            <div class="ms-auto d-flex pe-4">
-                <button id="btn-id" onclick="App.gantiBahasa('id')"
-                    class="btn btn-sm btn-bahasa btn-success me-1">ID</button>
-                <button id="btn-en" onclick="App.gantiBahasa('en')"
-                    class="btn btn-sm btn-bahasa btn-outline-dark me-1">EN</button>
-                <button id="btn-ar" onclick="App.gantiBahasa('ar')"
-                    class="btn btn-sm btn-bahasa btn-outline-dark">AR</button>
+            <div class="container-fluid px-3 px-lg-5 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <button id="btn-sidebar-toggle" class="btn btn-dark me-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#sidebarPKA" style="padding: 0.5rem 0.8rem;">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand fw-bold mb-0">EVENTBOOK PKA</a>
+                </div>
+
+                <div class="d-flex">
+                    <button id="btn-id" onclick="App.gantiBahasa('id')"
+                        class="btn btn-sm btn-bahasa btn-success me-1">ID</button>
+                    <button id="btn-en" onclick="App.gantiBahasa('en')"
+                        class="btn btn-sm btn-bahasa btn-outline-dark me-1">EN</button>
+                    <button id="btn-ar" onclick="App.gantiBahasa('ar')"
+                        class="btn btn-sm btn-bahasa btn-outline-dark">AR</button>
+                </div>
             </div>
         </nav>
     </div>
