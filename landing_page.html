@@ -1,0 +1,61 @@
+<style>
+    /* Versi Desktop (Default) */
+    .masthead-landing {
+        min-height: 100vh;
+        background: url("assets/img/BANNER%20WEB.png") no-repeat center center !important;
+        background-size: cover !important;
+    }
+
+    /* Pembungkus Tombol agar selalu di bawah */
+    .wrap-tombol {
+        position: absolute;
+        bottom: 10%; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+    }
+
+    .tombol-gerak {
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .tombol-gerak:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0px 5px 15px rgba(255, 255, 255, 0.4));
+    }
+
+    .tombol-gerak:active {
+        transform: scale(0.9);
+        transition: 0.1s;
+    }
+
+    @media (max-width: 768px) {
+        .masthead-landing {
+            background: url("assets/img/BANNER%20WEB%20hp.png") no-repeat center center !important;
+            background-size: cover !important; 
+        }
+        
+        .wrap-tombol {
+            bottom: 8%; 
+        }
+
+        .tombol-gerak {
+            width: 80%; 
+            padding: 15px 0 !important;
+        }
+    }
+</style>
+
+<header class="masthead-landing">
+    <div class="wrap-tombol">
+        <a class="btn px-5 py-3 tombol-gerak" href="#beranda" style="background-color: #064e3b; color: white; border-radius: 10px; font-family: 'Times New Roman', serif;">
+            BERANDA
+        </a>
+    </div>
+</header>
