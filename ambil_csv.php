@@ -17,8 +17,9 @@ if ($jenis == 'guru') {
     $namaFile = "assets/csv/jumlahpeserta.csv";
 } elseif ($jenis == 'panitiaguru') {
     $namaFile = "assets/csv/panitiaguru.csv";
+} elseif ($jenis == 'walikelas') {
+    $namaFile = "assets/csv/walikelas.csv";
 }
-
 $dataOutput = [];
 
 if (file_exists($namaFile)) {

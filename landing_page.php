@@ -60,7 +60,7 @@
         @media (max-width: 768px) {
         .masthead {
             /* Ganti filenya ke gambar yang sudah kamu desain khusus versi berdiri */
-            background: url("assets/img/BANNER MOBILE.png") no-repeat center center !important;
+            background: url("assets/img/BANNER WEB hp.png") no-repeat center center !important;
             background-size: cover !important; 
             /* Pakai 'cover' lagi karena gambarnya sudah tinggi, jadi gak bakal kepotong aneh */}
             

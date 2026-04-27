@@ -7,6 +7,13 @@
         background-attachment: scroll !important;
         background-size: cover !important;
     }
+    .footer {
+        background:url("assets/img/FOOTER WEB.png") !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+    }
     @media (max-width: 768px) {
         .masthead h1 {
             font-size: 1.8rem !important; /* Biar teks gak nabrak dinding HP */
@@ -24,7 +31,7 @@
     footer.footer {
     font-family: 'Times New Roman', serif !important;
     letter-spacing: 1px; /* Memberi jarak antar huruf agar elegan */
-}
+    }
 
 footer.footer strong {
     font-size: 18px;
@@ -57,7 +64,6 @@ footer.footer strong {
         <div class="d-flex justify-content-center">
             </div> 
         </div>
-    </div>
 </header>
 <!-- Menu-->
         <section class="Menu-section text-center pt-5" id="Menu"> 
@@ -163,7 +169,7 @@ footer.footer strong {
 }
 </style>
         <!-- Credit-->
-      <footer class="footer py-5 text-white" style="background-color: #70391D; font-family: 'Times New Roman', serif;">
+      <footer class="footer py-5 text-black;">
     <div class="container-fluid px-lg-5"> <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
                 <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; padding-bottom: 5px;">Tim Redaksi</h5>
@@ -183,9 +189,9 @@ footer.footer strong {
             <div class="col-lg-4 text-lg-end text-start">
                 <div class="mb-2">
                     <h5 class="text-uppercase mb-0">Panitia PKA 100 Gontor</h5>
-                    <p class="text-white-50">Pondok Modern Darussalam Gontor</p>
+                    <p class="text-black-50">Pondok Modern Darussalam Gontor</p>
                 </div>
-                <div class="small text-white-50 mt-4">
+                <div class="small text-black-50 mt-4">
                     Copyright &copy; PKA 100 Gontor 2026
                 </div>
             </div>

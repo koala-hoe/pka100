@@ -10,13 +10,19 @@
         /* CSS Header & Background */
         .masthead {
             min-height: 60vh; /* Tinggi header disesuaikan */
-            background: url("assets/img/BANNER WEB.png") !important;
+            background: url("assets/img/BANNER WEB dlm.png") !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
-            background-attachment: scroll !important;
-            background-size: cover !important;
+            
+            
         }
-
+        .footer {
+        background:url("assets/img/FOOTER WEB.png") !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-attachment: scroll !important;
+        background-size: cover !important;
+    }
         /* Styling Galeri */
         .item-serba {
             margin-bottom: 30px;
@@ -108,21 +114,41 @@
 
 <div class="row mt-5">
     <div class="col-lg-4 col-md-6 item-serba">
-        <img src="assets/img/DESIGN DALAM QOAH.jpeg" class="img-serba"
+        <img src="assets/img/FORMASI REBANA.jpg" class="img-serba"
              style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
-        <p class="caption-serba">Desain Dalam Auditorium</p>
+        <p class="caption-serba">Formasi Rebana</p>
     </div>
 
     <div class="col-lg-4 col-md-6 item-serba">
-        <img src="assets/img/CATALYST.jpg" class="img-serba"
+        <img src="assets/img/FORMASI PADUS.jpg" class="img-serba"
              style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
-        <p class="caption-serba">Formasi Bendera</p>
+        <p class="caption-serba">Formasi Paduan Suara</p>
     </div>
 
     <div class="col-lg-4 col-md-6 item-serba">
-        <img src="assets/img/maket.jpeg" class="img-serba"
+        <img src="assets/img/FORMASI ANGKLUNG 1.jpg" class="img-serba"
              style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
-        <p class="caption-serba">Maket</p>
+        <p class="caption-serba">Formasi Angklung 1</p>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-lg-4 col-md-6 item-serba">
+        <img src="assets/img/FORMASI REBANA.jpg" class="img-serba"
+             style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
+        <p class="caption-serba">Formasi Rebana</p>
+    </div>
+
+    <div class="col-lg-4 col-md-6 item-serba">
+        <img src="assets/img/FORMASI PADUS.jpg" class="img-serba"
+             style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
+        <p class="caption-serba">Formasi Paduan Suara</p>
+    </div>
+
+    <div class="col-lg-4 col-md-6 item-serba">
+        <img src="assets/img/FORMASI ANGKLUNG 1.jpg" class="img-serba"
+             style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
+        <p class="caption-serba">Formasi Angklung 1</p>
     </div>
 </div>
 <script>
@@ -144,8 +170,7 @@ function tampilkanGambar(linkBaru) {
     });
 }
 </script>
-<!-- Credit-->
-      <footer class="footer py-5 text-white" style="background-color: #70391D; font-family: 'Times New Roman', serif;">
+<footer class="footer py-5 text-black;">
     <div class="container-fluid px-lg-5"> <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
                 <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; padding-bottom: 5px;">Tim Redaksi</h5>
@@ -165,9 +190,9 @@ function tampilkanGambar(linkBaru) {
             <div class="col-lg-4 text-lg-end text-start">
                 <div class="mb-2">
                     <h5 class="text-uppercase mb-0">Panitia PKA 100 Gontor</h5>
-                    <p class="text-white-50">Pondok Modern Darussalam Gontor</p>
+                    <p class="text-black-50">Pondok Modern Darussalam Gontor</p>
                 </div>
-                <div class="small text-white-50 mt-4">
+                <div class="small text-black-50 mt-4">
                     Copyright &copy; PKA 100 Gontor 2026
                 </div>
             </div>
