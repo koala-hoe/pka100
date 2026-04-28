@@ -226,8 +226,8 @@ async function muatData(jenis) {
     if (data.length === 0) {
         wadah.innerHTML = "<div class='alert alert-warning'>Data tidak ditemukan atau gagal dimuat.</div>";
     } else {
-        let html = `<div class="table-responsive">
-            <table class="table table-bordered align-middle text-center" style="font-size: 14px; border: 1px solid #dee2e6;">`;
+        let html = `<div class="table-responsive" style="-webkit-overflow-scrolling:touch; overflow-x:auto;">
+            <table id="tablejadwal" class="table table-bordered align-middle text-center" style="font-size: 14px; border: 1px solid #dee2e6; white-space:nowrap;">`;
         
         data.forEach((row, rowIndex) => {
             if (rowIndex === 0) {
@@ -289,6 +289,13 @@ async function muatData(jenis) {
 // Set default data
 muatData('guru');
 </script>
+<style>
+#tablejadwal td, #tablejadwal th { white-space: nowrap; }
+.table-responsive { -webkit-overflow-scrolling: touch; overflow-x: auto; }
+@media (max-width: 576px) {
+  #tablejadwal { min-width: 600px; }
+}
+</style>
 
 <footer class="footer-data py-5 text-black">
     <div class="container-fluid px-lg-5"> 
