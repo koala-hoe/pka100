@@ -95,6 +95,15 @@
             .masthead-serba {
                 min-height: 200px !important;
             }
+            html {
+    scroll-behavior: smooth;
+}
+
+/* Tambahkan ini agar link yang aktif memberikan feedback visual */
+.hover-link:active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
 
             .container-fluid {
                 padding-left: 10px !important;
@@ -214,7 +223,23 @@
     <div id="content-display">
         <!-- Load dynamic content here -->
     </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Ambil elemen offcanvas
+    var myOffcanvas = document.getElementById('sidebarPKA');
+    var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
 
+    // Ambil semua link di dalam offcanvas body
+    var navLinks = myOffcanvas.querySelectorAll('.nav-link');
+
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            // Tutup offcanvas secara otomatis setelah diklik
+            bsOffcanvas.hide();
+        });
+    });
+});
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/bahasa.synced.js"></script>
