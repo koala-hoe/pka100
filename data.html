@@ -1,19 +1,51 @@
 <style>
-    .masthead-data {
-        min-height: 300px;
-        background: url("assets/img/BANNER%20WEB%20dlm.png") !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
-        background-size: cover !important;
-    }
-    .zoom-peta {
-        transition: transform 0.3s ease;
-        cursor: zoom-in;
-    }
-    .zoom-peta:hover {
-        transform: scale(1.02);
-    }
+/* Masthead */
+.masthead-data {
+  min-height: 300px;
+  background: url("assets/img/BANNER%20WEB%20dlm.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-size: cover !important;
+}
+
+/* Map image zoom */
+.zoom-peta {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+.zoom-peta:hover { transform: scale(1.02); }
+
+/* Chart and table */
+.chart-area { min-height: 320px; height: auto; position: relative; }
+#loading-spinner { z-index: 10; top: 0; left: 0; }
+#myAreaChart { padding: 10px; width: 100%; }
+.table { margin-bottom: 0; }
+#tablejadwal td, #tablejadwal th { white-space: nowrap; }
+.table-responsive { -webkit-overflow-scrolling: touch; overflow-x: auto; }
+@media (max-width: 576px) { #tablejadwal { min-width: 600px; } }
+
+/* Cards */
+.btn-card-custom { transition: all 0.2s ease-in-out; border: none; }
+.btn-card-custom:hover { transform: translateY(-5px); filter: brightness(1.1); }
+.btn-card-custom:active { transform: scale(0.95); }
+
+/* Footer */
+.footer-data {
+  background: url("assets/img/FOOTER%20WEB.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-size: cover !important;
+}
+
+/* Redaksi heading */
+.redaksi {
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  display: inline-block;
+  padding-bottom: 5px;
+}
 </style>
 
 <header class="masthead-data"></header>
@@ -256,7 +288,7 @@
 
     <div class="row mt-4">
         <div class="col-xl-12">
-            <div class="card shadow mb-4">
+            <div class="card shadow mb-4" id="target-tabel">
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary" id="judul-chart">Memuat data...</h6>
                 </div>
@@ -274,20 +306,7 @@
     </div>
 </div>
 
-<style>
-    #myAreaChart { padding: 10px; width: 100%; }
-    .table { margin-bottom: 0; }
-    .btn-card-custom { transition: all 0.2s ease-in-out; border: none; }
-    .btn-card-custom:hover { transform: translateY(-5px); filter: brightness(1.1); }
-    .btn-card-custom:active { transform: scale(0.95); }
-    .footer-data {
-        background:url("assets/img/FOOTER%20WEB.png") !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
-        background-size: cover !important;
-    }
-</style>
+
 
 <script>
 async function muatData(jenis) {
@@ -313,7 +332,6 @@ async function muatData(jenis) {
                 html += `</tr></thead><tbody>`;
             } else {
                 const isTotalRow = row[0] && row[0].toString().toUpperCase().includes("TOTAL");
-
                 if (isTotalRow) {
                     let jmlCol = row.length;
                     const totalValue = row[jmlCol - 2] || row[jmlCol - 1]; 
@@ -325,28 +343,17 @@ async function muatData(jenis) {
                     html += `<tr>`;
                     row.forEach((cell, colIndex) => {
                         let content = cell ? cell.trim() : "";
-
-                        if (colIndex < 2 && (content === "" || content === "-")) {
-                            return; 
-                        }
-
+                        if (colIndex < 2 && (content === "" || content === "-")) return; 
                         let rowspan = 1;
                         if (colIndex < 2 && content !== "") {
                             for (let i = rowIndex + 1; i < data.length; i++) {
                                 let nextCell = data[i][colIndex] ? data[i][colIndex].trim() : "";
-                                if (nextCell === "" || nextCell === "-") {
-                                    rowspan++;
-                                } else {
-                                    break;
-                                }
+                                if (nextCell === "" || nextCell === "-") rowspan++;
+                                else break;
                             }
                         }
-
-                        if (rowspan > 1) {
-                            html += `<td rowspan="${rowspan}" class="fw-bold bg-light">${content}</td>`;
-                        } else {
-                            html += `<td>${content}</td>`;
-                        }
+                        if (rowspan > 1) html += `<td rowspan="${rowspan}" class="fw-bold bg-light">${content}</td>`;
+                        else html += `<td>${content}</td>`;
                     });
                     html += `</tr>`;
                 }
@@ -355,9 +362,25 @@ async function muatData(jenis) {
 
         html += `</tbody></table></div>`;
         wadah.innerHTML = html;
+
+        // INI KUNCINYA: Otomatis scroll setelah tabel muncul
+        const target = document.getElementById('target-tabel');
+        if(target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
 
-    const namaMenu = { 'guru': 'Data Guru Per-Bagian', 'kelas': 'Data Kelas Santriwati', 'konsulat': 'Data Konsulat' };
+    const namaMenu = { 
+        'guru': 'Data Guru Per-Bagian', 
+        'kelas': 'Data Kelas Santriwati', 
+        'konsulat': 'Data Konsulat',
+        'ngabdi': 'Data Guru Berdasarkan Pengabdian',
+        'walikelas': 'Data Wali Kelas',
+        'jumlahpeserta': 'Data Peserta Acara',
+        'panitiaguru': 'Data Panitia Guru',
+        'panitiaenam': 'Data Panitia Kelas 6'
+    };
+    
     judul.innerText = namaMenu[jenis] || "Data Tabel";
     spinner.classList.add('d-none');
     wadah.style.opacity = '1';
@@ -366,27 +389,23 @@ async function muatData(jenis) {
 // Set default data
 muatData('guru');
 </script>
-<style>
-#tablejadwal td, #tablejadwal th { white-space: nowrap; }
-.table-responsive { -webkit-overflow-scrolling: touch; overflow-x: auto; }
-@media (max-width: 576px) {
-  #tablejadwal { min-width: 600px; }
-}
-</style>
 
-<footer class="footer-data py-5 text-black">
-    <div class="container-fluid px-lg-5"> 
+
+<footer class="footer-beranda py-5 text-black">
+    <div class="container-fluid px-lg-5">
         <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
-                <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; padding-bottom: 5px;">Tim Redaksi</h5>
+                <h5 class="text-uppercase mb-3 lang-txt redaksi" data-key="redaksi">Tim Redaksi</h5>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="mb-1"><strong>Penasihat:</strong> Al-Ustadz Dr.Nurul Salis Alamin, M.Pd.I.</p>
                         <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alfatul Urfi, Al-Ustadzah Sri Wahyuni </p>
-                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
+                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah
+                            A'izzaty Alifatul Urfi, Al-Ustadzah Sri Wahyuni </p>
+                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El
+                            Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
                     </div>
                 </div>
             </div>
