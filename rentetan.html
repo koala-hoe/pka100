@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="id">
 <style>
     [style*="#064e3b"] { background-color: #9B6448 !important; }
 
@@ -28,12 +30,21 @@
         line-height: 1;
     }
     .footer-rentetan {
-        background:url("assets/img/FOOTER%20WEB.png") !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
+    background: url("assets/img/FOOTER%20WEB.png") no-repeat center center !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    color: #351709; /* Supaya teks terlihat di atas background */
+}
+
+/* Versi Mobile (HP) */
+@media (max-width: 768px) {
+    .footer-rentetan {
+        background: url("assets/img/footer hp.png") no-repeat center center !important;
         background-size: cover !important;
+        padding-top: 3rem !important; /* Menyesuaikan ruang agar teks tidak menutupi gambar utama HP */
+        padding-bottom: 3rem !important;
     }
+}
 </style>
 
 <header class="masthead-rentetan"></header>
@@ -90,7 +101,7 @@
         <!-- Activities Rows (Sampled for brevity in this tool call, but in reality I should include all) -->
        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center align-items-center">
     <div class="col-lg-6">
-        <img class="img-fluid w-100" src="assets/img/Copy of IMG_7849.JPG" alt="Kegiatan 1" />
+        <img class="img-fluid w-100" src="assets/img/Copy%20of%20IMG_7849.JPG" alt="Kegiatan 1" />
     </div>
     <div class="col-lg-6">
         <div class="text-center h-100 project" style="background-color: #D3A63F;">
@@ -115,7 +126,7 @@
 </div>
         <div class="row gx-0 justify-content-center align-items-center">
     <div class="col-lg-6">
-        <img class="img-fluid w-100" src="assets/img/Copy of IMG_0361.jpeg" alt="Kegiatan 2" />
+        <img class="img-fluid w-100" src="assets/img/Copy%20of%20IMG_0361.jpeg" alt="Kegiatan 2" />
     </div>
     <div class="col-lg-6 order-lg-first">
         <div class="text-center h-100 project" style="background-color: #e6d2a5;">
@@ -144,7 +155,7 @@
                 <img class="img-fluid w-100" src="assets/img/_83A1295.JPG" alt="Kegiatan 1" />
             </div>
             <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #70391D;">
+                <div class="text-center h-100 project" style="background-color: #70391D;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_LatihanLKBB"></h4>
@@ -167,7 +178,7 @@
                 <img class="img-fluid w-100" src="assets/img/pod.JPG" alt="Kegiatan 2" />
             </div>
             <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #9B6448;">
+                <div class="text-center h-100 project" style="background-color: #9B6448;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_POD"></h4>
@@ -191,7 +202,7 @@
                 <img class="img-fluid w-100" src="assets/img/ohpondokku.JPG" alt="Kegiatan 1" />
             </div>
             <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #D3A63F;">
+                <div class="text-center h-100 project" style="background-color: #D3A63F;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_LatihanOhpondokku"></h4>
@@ -214,7 +225,7 @@
                 <img class="img-fluid w-100" src="assets/img/cca.JPG" alt="Kegiatan 2" />
             </div>
             <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #e6d2a5;">
+                <div class="text-center h-100 project" style="background-color: #e6d2a5;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-dark lang-txt" data-key="menu_LombaCCA"></h4>
@@ -238,7 +249,7 @@
                 <img class="img-fluid w-100" src="assets/img/hadrah.JPG" alt="Kegiatan 1" />
             </div>
             <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #70391D;">
+                <div class="text-center h-100 project" style="background-color: #70391D;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_HadrahAngkatan"></h4>
@@ -262,7 +273,7 @@
                 <img class="img-fluid w-100" src="assets/img/lombalkbb.JPG" alt="Kegiatan 2" />
             </div>
             <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #9B6448;">
+                <div class="text-center h-100 project" style="background-color: #9B6448;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_LombaLKBB"></h4>
@@ -286,7 +297,7 @@
                 <img class="img-fluid w-100" src="assets/img/singlesong.JPG" alt="Kegiatan 1" />
             </div>
             <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #D3A63F;">
+                <div class="text-center h-100 project" style="background-color: #D3A63F;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_SingleSong"></h4>
@@ -309,7 +320,7 @@
                 <img class="img-fluid w-100" src="assets/img/livemusic.JPG" alt="Kegiatan 2" />
             </div>
             <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #e6d2a5;">
+                <div class="text-center h-100 project" style="background-color: #e6d2a5;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-dark lang-txt" data-key="menu_LiveMusic"></h4>
@@ -333,7 +344,7 @@
                 <img class="img-fluid w-100" src="assets/img/arn.JPG" alt="Kegiatan 1" />
             </div>
             <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #70391D;">
+                <div class="text-center h-100 project" style="background-color: #70391D;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_ARN"></h4>
@@ -356,7 +367,7 @@
                 <img class="img-fluid w-100" src="assets/img/demo-image-02.jpg" alt="Kegiatan 2" />
             </div>
             <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #9B6448;">
+                <div class="text-center h-100 project" style="background-color: #9B6448;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-white lang-txt" data-key="menu_PembagianHadiah"></h4>
@@ -380,7 +391,7 @@
                 <img class="img-fluid w-100" src="assets/img/da.JPG" alt="Kegiatan 1" />
             </div>
             <div class="col-lg-6">
-                <div class="text-center h-100 project"style="background-color: #D3A63F;">
+                <div class="text-center h-100 project" style="background-color: #D3A63F;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-left p-5">
                             <h4 class="text-white lang-txt" data-key="menu_DA"></h4>
@@ -403,7 +414,7 @@
                 <img class="img-fluid w-100" src="assets/img/pg.JPG" alt="Kegiatan 2" />
             </div>
             <div class="col-lg-6 order-lg-first">
-                <div class="text-center h-100 project"style="background-color: #e6d2a5;">
+                <div class="text-center h-100 project" style="background-color: #e6d2a5;">
                     <div class="d-flex h-100">
                         <div class="project-text w-100 my-auto text-center text-lg-right p-5">
                             <h4 class="text-dark lang-txt" data-key="menu_PG"></h4>
@@ -424,11 +435,11 @@
     </div> 
 </section>
 
-<footer class="footer-rentetan py-5 text-black">
-    <div class="container-fluid px-lg-5"> 
+<footer class="footer-rentetan py-5">
+    <div class="container-fluid px-lg-5" style="color: #351709;"> 
         <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
-                <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; padding-bottom: 5px;">Tim Redaksi</h5>
+                <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 2px solid #D3A63F; display: inline-block; padding-bottom: 5px; font-weight: bold;">Tim Redaksi</h5>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="mb-1"><strong>Penasihat:</strong> Al-Ustadz Dr.Nurul Salis Alamin, M.Pd.I.</p>
@@ -453,3 +464,4 @@
     </div>
 </footer>
 
+</html>

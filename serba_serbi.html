@@ -8,13 +8,22 @@
         background-attachment: scroll !important;
         background-size: cover !important;
     }
-    .footer-serba {
-        background:url("assets/img/FOOTER%20WEB.png") !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
+    .footer-rentetan {
+    background: url("assets/img/FOOTER%20WEB.png") no-repeat center center !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    color: #351709; /* Supaya teks terlihat di atas background */
+}
+
+/* Versi Mobile (HP) */
+@media (max-width: 768px) {
+    .footer-rentetan {
+        background: url("assets/img/footer hp.png") no-repeat center center !important;
         background-size: cover !important;
+        padding-top: 3rem !important; /* Menyesuaikan ruang agar teks tidak menutupi gambar utama HP */
+        padding-bottom: 3rem !important;
     }
+}
     .item-serba {
         margin-bottom: 30px;
         transition: transform 0.3s ease;
@@ -94,9 +103,7 @@
                 <p class="caption-serba">Formasi Angklung</p>
             </div>
         </div>
-    </div>
-    
-    <div class="row mt-5">
+        <div class="row mt-5">
             <div class="col-lg-4 col-md-6 item-serba">
                 <img src="assets/img/FORMASI REBANA.jpg" class="img-serba" style="cursor: pointer;" onclick="tampilkanGambar(this.src)">
                 <p class="caption-serba">Formasi Rebana</p>
@@ -110,6 +117,9 @@
                 <p class="caption-serba">Formasi Tari Saman</p>
             </div>
         </div>
+    </div>
+    
+    
 </section>
 
 <script>
@@ -127,18 +137,18 @@ function tampilkanGambar(linkBaru) {
 }
 </script>
 
-<footer class="footer-serba py-5 text-black">
-    <div class="container-fluid px-lg-5"> 
+<footer class="footer-rentetan py-5">
+    <div class="container-fluid px-lg-5" style="color: #351709;"> 
         <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
-                <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; padding-bottom: 5px;">Tim Redaksi</h5>
+                <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 2px solid #D3A63F; display: inline-block; padding-bottom: 5px; font-weight: bold;">Tim Redaksi</h5>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="mb-1"><strong>Penasihat:</strong> Al-Ustadz Dr.Nurul Salis Alamin, M.Pd.I.</p>
                         <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alfatul Urfi, Al-Ustadzah Sri Wahyuni </p>
+                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alifatul Urfi, Al-Ustadzah Sri Wahyuni </p>
                         <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
                     </div>
                 </div>

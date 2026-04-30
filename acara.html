@@ -22,7 +22,22 @@
         padding: 60px 0; 
         border-bottom: 5px solid #D3A63F; /* Garis emas */
     }
+.footer-rentetan {
+    background: url("assets/img/FOOTER%20WEB.png") no-repeat center center !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    color: #351709; /* Supaya teks terlihat di atas background */
+}
 
+/* Versi Mobile (HP) */
+@media (max-width: 768px) {
+    .footer-rentetan {
+        background: url("assets/img/footer hp.png") no-repeat center center !important;
+        background-size: cover !important;
+        padding-top: 3rem !important; /* Menyesuaikan ruang agar teks tidak menutupi gambar utama HP */
+        padding-bottom: 3rem !important;
+    }
+}
     /* Card dengan border halus emas */
     .card { 
         border: 1px solid rgba(211, 166, 63, 0.2); 
@@ -160,7 +175,7 @@
                                     <tr><td>2</td><td>Komandan Upacara</td><td class="text-center">1</td></tr>
                                     <tr><td>3</td><td>Paskibra</td><td class="text-center">99</td></tr>
                                     <tr><td>4</td><td>MC</td><td class="text-center">2</td></tr>
-                                    <tr class="table-dark fw-bold">
+                                    <tr class="fw-bold" style="background-color: #70391D; color: #EFE7E4;">
                                         <td colspan="2">TOTAL</td>
                                         <td class="text-center">109</td>
                                     </tr>
@@ -391,7 +406,7 @@ Jumlah pengikut acara MBGND pada Pekan Perkenalan Khurbatu-l-‘Arsy tahun 1447 
             <!-- Baris Pertama: Bali, Kalimantan, Sumatera -->
             <div class="row g-4 border-bottom pb-4 mb-4">
                 <div class="col-md-4 border-end">
-                    <h6 class="fw-bold text-success">Jangi Janger (Bali)</h6>
+                    <h6 class="fw-bold" style="color: #351709;">Jangi Janger (Bali)</h6>
                     <div class="lyrics-text small text-muted">
                         Arasijang jangi janger...<br>
                         Sengsengin sengseng janger...<br>
@@ -405,7 +420,7 @@ Jumlah pengikut acara MBGND pada Pekan Perkenalan Khurbatu-l-‘Arsy tahun 1447 
                 </div>
 
                 <div class="col-md-4 border-end">
-                    <h6 class="fw-bold text-success">Cik Cik Periuk (Kalimantan)</h6>
+                    <h6 class="fw-bold" style="color: #351709;">Cik Cik Periuk (Kalimantan)</h6>
                     <div class="lyrics-text small text-muted">
                         Cik cik periuk bilanga sumping dari jawe<br>
                         Datang nek kecibook bawa kepiting dua ekook<br>
@@ -415,7 +430,7 @@ Jumlah pengikut acara MBGND pada Pekan Perkenalan Khurbatu-l-‘Arsy tahun 1447 
                 </div>
 
                 <div class="col-md-4">
-                    <h6 class="fw-bold text-success">Andam Oi (Sumatera)</h6>
+                    <h6 class="fw-bold" style="color: #351709;">Andam Oi (Sumatera)</h6>
                     <div class="lyrics-text small text-muted">
                         Andam oi andam... oi andam oi <br>
 Andam oi andam... oi andam oi <br>
@@ -444,7 +459,7 @@ Andam oi andam... oi andam oi
             <!-- Baris Kedua: Jawa Barat, Sulawesi, Jawa Tengah (Prau Layar) -->
             <div class="row g-4">
                 <div class="col-md-4 border-end">
-                    <h6 class="fw-bold text-success">Bandung (Jawa Barat)</h6>
+                    <h6 class="fw-bold" style="color: #351709;">Bandung (Jawa Barat)</h6>
                     <div class="lyrics-text small text-muted">
                         Tentu, ini lirik lagu Salira teh Bandung dengan tag <br> di setiap akhir barisnya:
 
@@ -481,7 +496,7 @@ Nang ning ning nang eu 3x
                 </div>
 
                 <div class="col-md-4 border-end">
-                    <h6 class="fw-bold text-success">Medley Sulawesi</h6>
+                    <h6 class="fw-bold" style="color: #351709;">Medley Sulawesi</h6>
                     <div class="lyrics-text small text-muted">
                         <em>(Instrumental Medley Budaya Sulawesi)</em><br>
                         Menampilkan ritme khas Celebes yang dinamis<br>
@@ -491,7 +506,7 @@ Nang ning ning nang eu 3x
                 </div>
 
                 <div class="col-md-4">
-                    <h6 class="fw-bold text-success">Prau Layar (Jawa Tengah)</h6>
+                    <h6 class="fw-bold" style="color: #351709;">Prau Layar (Jawa Tengah)</h6>
                     <div class="lyrics-text small text-muted">
                         Yo konco ning nggisik gembiro <br>
 Anglerap-lerap banyune segoro <br>
@@ -523,12 +538,34 @@ Tumandang nyambut gawe 3x <br>
         </div>
     </main>
 
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p>&copy; 2026 - Panitia Pekan Perkenalan Khurbatu-l-‘Arsy</p>
-            <small>“To give, to give, to give, not to take.”</small>
+<footer class="footer-rentetan py-5">
+    <div class="container-fluid px-lg-5" style="color: #351709;"> 
+        <div class="row">
+            <div class="col-lg-8 text-start mb-4 mb-lg-0">
+                <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 2px solid #D3A63F; display: inline-block; padding-bottom: 5px; font-weight: bold;">Tim Redaksi</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-1"><strong>Penasihat:</strong> Al-Ustadz Dr.Nurul Salis Alamin, M.Pd.I.</p>
+                        <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alifatul Urfi, Al-Ustadzah Sri Wahyuni </p>
+                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-lg-end text-start">
+                <div class="mb-2">
+                    <h5 class="text-uppercase mb-0">Panitia PKA 100 Gontor</h5>
+                    <p class="text-black-50">Pondok Modern Darussalam Gontor</p>
+                </div>
+                <div class="small text-black-50 mt-4">
+                    Copyright &copy; PKA 100 Gontor 2026
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

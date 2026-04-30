@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="id">
 <style>
     .masthead-beranda {
         min-height: 400px;
@@ -8,13 +10,22 @@
         background-size: cover !important;
     }
 
-    .footer-beranda {
-        background: url("assets/img/FOOTER%20WEB.png") !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
+    .footer-rentetan {
+    background: url("assets/img/FOOTER%20WEB.png") no-repeat center center !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+    color: #351709; /* Supaya teks terlihat di atas background */
+}
+
+/* Versi Mobile (HP) */
+@media (max-width: 768px) {
+    .footer-rentetan {
+        background: url("assets/img/footer hp.png") no-repeat center center !important;
         background-size: cover !important;
+        padding-top: 3rem !important; /* Menyesuaikan ruang agar teks tidak menutupi gambar utama HP */
+        padding-bottom: 3rem !important;
     }
+}
 
     @media (max-width: 768px) {
         .masthead-beranda h1 {
@@ -95,7 +106,7 @@
         </div>
         <img class="img-fluid" src="assets/img/lightning.png" style="max-width: 500px; width: 100%; height: auto;"
             alt="..." />
-        <p class="text-black-50 pt-3 mb-4 lang-txt" data-key="narasi_pembuka"></p>
+        <p class="pt-3 mb-4 lang-txt" data-key="narasi_pembuka" style="color: #351709; line-height: 1.8;"></p>
     </div>
 </section>
 
@@ -109,7 +120,7 @@
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4 class="lang-txt" data-key="menu_rentetan"></h4>
-                    <p class="text-black-50 mb-3 lang-txt" data-key="narasiup_rentetan"></p>
+                    <p class="mb-3 lang-txt" data-key="narasiup_rentetan" style="color: #351709;"></p>
                     <a href="#rentetan" class="tombol-gerak-icon">
                         <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
                     </a>
@@ -123,7 +134,7 @@
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4 class="lang-txt" data-key="menu_data"></h4>
-                    <p class="text-black-50 mb-3 lang-txt" data-key="narasiup_data"></p>
+                    <p class="mb-3 lang-txt" data-key="narasiup_data" style="color: #351709;"></p>
                     <a href="#data" class="tombol-gerak-icon">
                         <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
                     </a>
@@ -137,7 +148,7 @@
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4 class="lang-txt" data-key="menu_acara"></h4>
-                    <p class="text-black-50 mb-3 lang-txt" data-key="narasiup_acara"></p>
+                    <p class="mb-3 lang-txt" data-key="narasiup_acara" style="color: #351709;"></p>
                     <a href="#acara" class="tombol-gerak-icon">
                         <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
                     </a>
@@ -151,7 +162,7 @@
             <div class="col-xl-4 col-lg-5">
                 <div class="featured-text text-center text-lg-left">
                     <h4 class="lang-txt" data-key="menu_serba"></h4>
-                    <p class="text-black-50 mb-3 lang-txt" data-key="narasiup_serba"></p>
+                    <p class="mb-3 lang-txt" data-key="narasiup_serba" style="color: #351709;"></p>
                     <a href="#serba_serbi" class="tombol-gerak-icon">
                         <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
                     </a>
@@ -162,23 +173,19 @@
 </section>
 
 <!-- Credit-->
-<footer class="footer-beranda py-5 text-black">
-    <div class="container-fluid px-lg-5">
+<footer class="footer-rentetan py-5">
+    <div class="container-fluid px-lg-5" style="color: #351709;"> 
         <div class="row">
             <div class="col-lg-8 text-start mb-4 mb-lg-0">
-                <h5 class="text-uppercase mb-3 lang-txt"
-                    style="letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; padding-bottom: 5px;"
-                    data-key="redaksi">Tim Redaksi</h5>
+                <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 2px solid #D3A63F; display: inline-block; padding-bottom: 5px; font-weight: bold;">Tim Redaksi</h5>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="mb-1"><strong>Penasihat:</strong> Al-Ustadz Dr.Nurul Salis Alamin, M.Pd.I.</p>
                         <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah
-                            A'izzaty Alifatul Urfi, Al-Ustadzah Sri Wahyuni </p>
-                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El
-                            Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
+                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alifatul Urfi, Al-Ustadzah Sri Wahyuni </p>
+                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
                     </div>
                 </div>
             </div>
@@ -194,3 +201,4 @@
         </div>
     </div>
 </footer>
+</html>
