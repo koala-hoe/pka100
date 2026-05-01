@@ -43,17 +43,18 @@
 
         /* Efek Teks Emas Berkilau (seperti tulisan "COLOR" di gambar) */
         .gold-text {
-            color: var(--gold);
-            background: linear-gradient(to bottom, #f5d172 0%, #d3a63f 50%, #9b7a2d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bold;
+           color: var(--gold);
+    background: linear-gradient(to bottom, #f5d172 0%, #d3a63f 50%, #9b7a2d 100%);
+    -webkit-background-clip: text;
+    background-clip: text; /* Tambahkan ini */
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
         }
 
         /* Gradient Mewah untuk Header/Section */
         .bg-gold-gradient {
-            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--medium-brown) 100%);
-            color: var(--ivory-white);
+            background: linear-gradient(135deg, #f5d172, #d3a63f);
+            color: var(--dark-brown);
             border-bottom: 4px solid var(--gold);
         }
 
