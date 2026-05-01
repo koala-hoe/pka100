@@ -1,574 +1,1142 @@
 <!DOCTYPE html>
 <html lang="id">
-<header class="masthead-acara"></header>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Acara - Apel Tahunan 1447 H</title>
+    <title>Apel Tahunan - The Golden Age Catalyst</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <style>
-    /* Menggunakan palet warna mewah: Cokelat & Emas */
-    body { 
-        background-color: #EFE7E4; 
-        color: #351709;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    }
+        :root {
+            /* Palet Warna Sesuai Gambar */
+            --dark-brown: #351709;
+            --medium-brown: #70391D;
+            --light-brown: #9B6448;
+            --gold-metallic: #D3A63F;
+            --ivory-white: #EFE7E4;
 
-    /* Header dengan gradasi cokelat tua ke cokelat hangat */
-    .hero-section { 
-        background: linear-gradient(135deg, #351709, #70391D); 
-        color: #EFE7E4; 
-        padding: 60px 0; 
-        border-bottom: 5px solid #D3A63F; /* Garis emas */
-    }
-.footer-rentetan {
-    background: url("assets/img/FOOTER%20WEB.png") no-repeat center center !important;
-    background-size: cover !important;
-    background-attachment: scroll !important;
-    color: #351709; /* Supaya teks terlihat di atas background */
-}
+            /* Variabel Fungsional */
+            --gold: var(--gold-metallic);
+            --dark-bg: var(--dark-brown);
+            --accent: var(--ivory-white);
+        }
 
-/* Versi Mobile (HP) */
-@media (max-width: 768px) {
-    .footer-rentetan {
-        background: url("assets/img/footer hp.png") no-repeat center center !important;
-        background-size: cover !important;
-        padding-top: 3rem !important; /* Menyesuaikan ruang agar teks tidak menutupi gambar utama HP */
-        padding-bottom: 3rem !important;
-    }
-}
-    /* Card dengan border halus emas */
-    .card { 
-        border: 1px solid rgba(211, 166, 63, 0.2); 
-        background-color: #ffffff;
-        box-shadow: 0 4px 15px rgba(53, 23, 9, 0.1); 
-        margin-bottom: 25px; 
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--dark-brown);
+            margin: 0;
+        }
 
-    .card-header {
-        background-color: #351709 !important;
-        color: #D3A63F !important; /* Teks emas di atas cokelat */
-        font-weight: bold;
-        border-bottom: 2px solid #D3A63F;
-    }
+        h1,
+        h2,
+        h3,
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-brown);
+            font-weight: 700;
+        }
 
-    /* Judul Seksi dengan aksen emas */
-    .section-title { 
-        border-left: 5px solid #D3A63F; 
-        padding-left: 15px; 
-        margin-bottom: 20px; 
-        color: #351709;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+        /* Efek Teks Emas Berkilau (seperti tulisan "COLOR" di gambar) */
+        
 
-    /* Tabel Custom */
-    .table-custom thead { 
-        background-color: #70391D; 
-        color: #EFE7E4; 
-    }
+        /* Gradient Mewah untuk Header/Section */
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--medium-brown) 100%);
+            color: var(--ivory-white);
+            border-bottom: 4px solid var(--gold);
+        }
 
-    /* Box Lirik dengan nuansa emas */
-    .lyrics-box { 
-        background-color: #fff; 
-        border-radius: 10px; 
-        padding: 20px; 
-        border-left: 4px solid #D3A63F; 
-        height: 100%; 
-        box-shadow: inset 0 0 10px rgba(211, 166, 63, 0.05);
-    }
+        .masthead-acara {
+            min-height: 400px;
+            background: url("assets/img/BANNER%20WEB%20dlm.png") no-repeat center !important;
+            background-size: cover !important;
+            background-attachment: scroll !important;
+            width: 100%;
+            border-bottom: 5px solid var(--gold);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
 
-    .lyrics-title { 
-        color: #70391D; 
-        font-weight: bold; 
-        border-bottom: 1px solid #D3A63F; 
-        margin-bottom: 10px; 
-        padding-bottom: 5px; 
-    }
+        /* Button dengan efek Gold Foil */
+        .btn-gold {
+            background: linear-gradient(deg, #d3a63f, #f5d172);
+            color: var(--dark-brown);
+            border: 1px solid var(--medium-brown);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-    .lyrics-content {
-        column-rule: 1px solid rgba(211, 166, 63, 0.3);
-    }
+        .btn-gold:hover {
+            background: var(--dark-brown);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
 
-    /* Teks Narasi */
-    .narrative-text { 
-        font-style: italic; 
-        line-height: 1.8; 
-        color: #351709; 
-    }
+        /* Card dengan Border Emas */
+        .card-performance {
+            background-color: white;
+            border: 2px solid var(--gold);
+            border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-    /* Badge menggunakan warna cokelat muda */
-    .badge-count { 
-        font-size: 0.9rem; 
-        background-color: #9F6448 !important;
-        color: #EFE7E4;
-    }
+        .card-performance:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(112, 57, 29, 0.2);
+            /* Shadow warna medium brown */
+        }
 
-    /* Footer */
-    footer {
-        background-color: #351709 !important;
-        color: #D3A63F !important;
-        border-top: 3px solid #D3A63F;
-    }
+        .arabic-text {
+            font-size: 1.6rem;
+            direction: rtl;
+            margin-bottom: 1rem;
+            color: var(--medium-brown);
+            line-height: 2.2;
+        }
 
-    /* Warna khusus untuk teks Arab agar lebih kontras */
-    .arabic-text {
-        color: #351709;
-        font-size: 1.3rem;
-        background-color: rgba(211, 166, 63, 0.1) !important;
-        border: 1px solid #D3A63F !important;
-    }
-</style>
-</head>
+        .nav-pills .nav-link.active {
+            background-color: var(--gold);
+            color: var(--dark-brown);
+            font-weight: bold;
+        }
+
+        footer {
+            background: url("assets/img/FOOTER%20WEB.png") no-repeat center center !important;
+            background-size: cover !important;
+            background-attachment: scroll !important;
+            color: #351709;
+            /* Supaya teks terlihat di atas background */
+        }
+
+        /* Versi Mobile (HP) */
+        @media (max-width: 768px) {
+            footer {
+                background: url("assets/img/footer hp.png") no-repeat center center !important;
+                background-size: cover !important;
+                padding-top: 3rem !important;
+                /* Menyesuaikan ruang agar teks tidak menutupi gambar utama HP */
+                padding-bottom: 3rem !important;
+            }
+        }
+    </style>
+    <header class="masthead-acara"></header>
 
 <body>
-<style>
-    .masthead-acara {
-        min-height: 300px;
-        background: url("assets/img/BANNER%20WEB%20dlm.png") !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
-        background-size: cover !important;
-    }
-
-    .footer-serba {
-        background:url("assets/img/FOOTER%20WEB.png") !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-attachment: scroll !important;
-        background-size: cover !important;
-    }
-</style>
-
-
-    <!-- Header / Hero -->
-    <header class="hero-section text-center">
+    <!-- Bagian A: Rundown (Timing Acara) -->
+    <section id="rundown" class="py-5">
         <div class="container">
-            <h1 class="display-4 fw-bold">APEL TAHUNAN</h1>
-            <p class="lead">Pekan Perkenalan Khurbatu-l-‘Arsy Tahun 1447 H / 2026 M</p>
-        </div>
-    </header>
+            <h2 class="text-center mb-5">Timing Acara <span class="gold-text">Apel Tahunan</span></h2>
+            <div class="accordion" id="accordionRundown">
 
-    <main class="container my-5">
-        <div class="row">
-            
-            <!-- Kolom Kiri: Petugas & Statistik -->
-            <div class="col-lg-5">
-                <section id="petugas">
-                    <h3 class="section-title">A. Petugas Acara</h3>
-                    
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">1. Jumlah Petugas</h5>
-                            <table class="table table-hover table-custom">
-                                <thead>
+                <!-- FASE 1: Pembukaan & Persiapan -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne">
+                            06:50 - 07:12 | Pembukaan & Persiapan
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionRundown">
+                        <div class="accordion-body p-0">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-dark">
                                     <tr>
-                                        <th>No</th>
-                                        <th>Petugas</th>
-                                        <th class="text-center">Jumlah</th>
+                                        <th>NO</th>
+                                        <th>DURASI</th>
+                                        <th colspan="2" class="text-center">WAKTU</th>
+                                        <th>KEGIATAN</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>1</td><td>Komandan Pleton</td><td class="text-center">7</td></tr>
-                                    <tr><td>2</td><td>Komandan Upacara</td><td class="text-center">1</td></tr>
-                                    <tr><td>3</td><td>Paskibra</td><td class="text-center">99</td></tr>
-                                    <tr><td>4</td><td>MC</td><td class="text-center">2</td></tr>
-                                    <tr class="fw-bold" style="background-color: #70391D; color: #EFE7E4;">
-                                        <td colspan="2">TOTAL</td>
-                                        <td class="text-center">109</td>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>10 Menit</td>
+                                        <td>06:50</td>
+                                        <td>07:00</td>
+                                        <td>Pleton memasuki lapangan upacara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>2 Menit</td>
+                                        <td>07:00</td>
+                                        <td>07:02</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>2 Menit</td>
+                                        <td>07:02</td>
+                                        <td>07:04</td>
+                                        <td>Persiapan barisan oleh masing-masing komandan peleton</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>1 Menit</td>
+                                        <td>07:04</td>
+                                        <td>07:05</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>2 Menit</td>
+                                        <td>07:05</td>
+                                        <td>07:07</td>
+                                        <td>Komandan upacara memasuki lapangan upacara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>1 Menit</td>
+                                        <td>07:07</td>
+                                        <td>07:08</td>
+                                        <td>Penghormatan umum kepada komandan upacara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>4 Menit</td>
+                                        <td>07:08</td>
+                                        <td>07:12</td>
+                                        <td>Laporan komandan peleton kepada komandan upacara</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
+                </div>
 
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">2. Pasukan Inti Pengibar</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span><strong>Kinarya Adena Arsa</strong><br><small class="text-muted">Pembawa Baki</small></span>
-                                    <span class="badge align-self-center" style="background-color: #D3A63F; color: #351709;">4E</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span><strong>Queensa Java Budiveda</strong><br><small class="text-muted">Pendamping Pembawa Baki</small></span>
-                                    <span class="badge align-self-center" style="background-color: #D3A63F; color: #351709;">4F</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span><strong>Aghniya Naila Althaf</strong><br><small class="text-muted">Pengerek Bendera</small></span>
-                                    <span class="badge align-self-center" style="background-color: #D3A63F; color: #351709;">4B</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between">
-                                    <span><strong>Azzarfa Nur Arizty</strong><br><small class="text-muted">Pembentang Bendera</small></span>
-                                    <span class="badge align-self-center" style="background-color: #D3A63F; color: #351709;">4I</span>
-                                </li>
-                            </ul>
+                <!-- FASE 2: Protokol Utama -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo">
+                            07:12 - 07:59 | Protokol Utama
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionRundown">
+                        <div class="accordion-body p-0">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>DURASI</th>
+                                        <th colspan="2" class="text-center">WAKTU</th>
+                                        <th>KEGIATAN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>1 Menit</td>
+                                        <td>07:12</td>
+                                        <td>07:13</td>
+                                        <td>Pimpinan Pondok Modern Darussalam Gontor selaku Inspektur upacara berkenan
+                                            menuju panggung kehormatan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>1 Menit</td>
+                                        <td>07:13</td>
+                                        <td>07:14</td>
+                                        <td>Penghormatan umum kepada Inspektur upacara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>2 Menit</td>
+                                        <td>07:14</td>
+                                        <td>07:16</td>
+                                        <td>Laporan komandan upacara kepada Inspektur Upacara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>15 Menit</td>
+                                        <td>07:16</td>
+                                        <td>07:31</td>
+                                        <td>Pengibaran bendera merah putih diiringi lagu kebangsaan Indonesia Raya</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td>2 Menit</td>
+                                        <td>07:31</td>
+                                        <td>07:33</td>
+                                        <td>(para tamu undangan dimohon berdiri)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td>10 Menit</td>
+                                        <td>07:33</td>
+                                        <td>07:43</td>
+                                        <td>(para tamu undangan dipersilahkan duduk kembali)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td>1 Menit</td>
+                                        <td>07:43</td>
+                                        <td>07:44</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>15 Menit</td>
+                                        <td>07:44</td>
+                                        <td>07:59</td>
+                                        <td>Inspeksi barisan oleh inspektur upacara disertai para pembantu Pimpinan
+                                            Pondok Modern</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </section>
+                </div>
+                <!-- FASE 3: Penutupan Upacara & Atraksi Seni -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree">
+                            07:59 - 10:11 | Penutupan & Atraksi Seni
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionRundown">
+                        <div class="accordion-body p-0">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>DURASI</th>
+                                        <th colspan="2" class="text-center">WAKTU</th>
+                                        <th>KEGIATAN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>16</td>
+                                        <td>15 Menit</td>
+                                        <td>07:59</td>
+                                        <td>08:14</td>
+                                        <td>Amanat Inspektur Upacara dilanjutkan dengan Doa</td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td>1 Menit</td>
+                                        <td>08:14</td>
+                                        <td>08:15</td>
+                                        <td>Penghormatan umum kepada Inspektur Upacara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>18</td>
+                                        <td>1 Menit</td>
+                                        <td>08:15</td>
+                                        <td>08:16</td>
+                                        <td>Laporan komandan upacara kepada Inspektur Upacara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>19</td>
+                                        <td>1 Menit</td>
+                                        <td>08:16</td>
+                                        <td>08:17</td>
+                                        <td>Inspektur Upacara berkenan meninggalkan panggung kehormatan</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20</td>
+                                        <td>2 Menit</td>
+                                        <td>08:17</td>
+                                        <td>08:19</td>
+                                        <td>Komandan upacara meninggalkan lapangan upacara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>21</td>
+                                        <td>1 Menit</td>
+                                        <td>08:19</td>
+                                        <td>08:20</td>
+                                        <td>MC</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22</td>
+                                        <td>15 Menit</td>
+                                        <td>08:20</td>
+                                        <td>08:35</td>
+                                        <td>Marching Band Gema Nada Darussalam</td>
+                                    </tr>
+                                    <tr>
+                                        <td>23</td>
+                                        <td>17 Menit</td>
+                                        <td>08:35</td>
+                                        <td>08:52</td>
+                                        <td>Atraksi Rebana</td>
+                                    </tr>
+                                    <tr>
+                                        <td>24</td>
+                                        <td>15 Menit</td>
+                                        <td>08:52</td>
+                                        <td>09:07</td>
+                                        <td>Atraksi Angklung</td>
+                                    </tr>
+                                    <tr>
+                                        <td>25</td>
+                                        <td>5 Menit</td>
+                                        <td>09:07</td>
+                                        <td>09:12</td>
+                                        <td>Menuju Peradaban Mulia (1)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>26</td>
+                                        <td>12 Menit</td>
+                                        <td>09:12</td>
+                                        <td>09:24</td>
+                                        <td>Saman</td>
+                                    </tr>
+                                    <tr>
+                                        <td>27</td>
+                                        <td>7 Menit</td>
+                                        <td>09:24</td>
+                                        <td>09:31</td>
+                                        <td>Menuju Peradaban Mulia (2)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>28</td>
+                                        <td>13 Menit</td>
+                                        <td>09:31</td>
+                                        <td>09:44</td>
+                                        <td>Tari Nusantara</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td>10 Menit</td>
+                                        <td>09:44</td>
+                                        <td>09:54</td>
+                                        <td>Menuju Peradaban Mulia (3)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>30</td>
+                                        <td>10 Menit</td>
+                                        <td>09:54</td>
+                                        <td>10:04</td>
+                                        <td>Live Music</td>
+                                    </tr>
+                                    <tr>
+                                        <td>31</td>
+                                        <td>7 Menit</td>
+                                        <td>10:04</td>
+                                        <td>10:11</td>
+                                        <td>Grand Closing</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
 
-                <section id="statistik-penampilan" class="mt-4">
-                    <h3 class="section-title">B. Profil Penampilan</h3>
-                    <!-- Marching Band -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h6>Dengan Moto “One Sound, One Band, One Mission” yang menyatu dalam jiwa raga MBGND dan mengalir deras dalam sanubari kami membakar semangat perjuangan untuk menjadi yang terbaik.
-MBGND terdiri dari 43 Brass, 15 Marching Percussion, 13 Front Ensemble, dan 17 Colour Guard, serta Field Commander, kami mencoba menyatu dengan melodi seiring dentuman senar yang rancak, tiupan hornline yang merdu, diiringi oleh kibaran bendera yang menyatu untuk mewujudkan melodi yang syahdu.
-Lagu pertama, lagu ini menanamkan keyakinan bahwa setiap ujian adalah bagian dari proses pendidikan yang membentuk keteguhan dan kedewasaan.. “Imagine Dragon – Believer”
-Lagu selanjutnya, lagu ini membawa nuansa harapan, nilai, dan jati diri. Tetap teguh pada prinsip, iman, dan tujuan hidup, meski berada di tengah ujian. “Bionic – Bunga Harapan”
-Lagu terakhir, lagu yang menggambarkan kebangkitan setelah melewati semua ujian. Bukan lagi sekedar bertahan, tapi bangkit dengan kekuatan baru, “Believer 2.0 (Myrath – Believer)”
-Demikianlah penampilan kami, mohon doa dari hadirin semoga kami dapat terus maju dan berkembang di masa yang akan datang, Amin ya rabbal alamin
-Jumlah pengikut acara MBGND pada Pekan Perkenalan Khurbatu-l-‘Arsy tahun 1447 H adalah 94 santri dengan rincian sebagai berikut:
-</h6>
-                            <p class="small text-muted mb-2">Total: 94 Santri</p>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-secondary badge-count">Kelas 2: 8</span>
-                                <span class="badge bg-secondary badge-count">Kelas 3: 38</span>
-                                <span class="badge bg-secondary badge-count">Kelas 4: 14</span>
-                                <span class="badge bg-secondary badge-count">Kelas 5: 19</span>
-                                <span class="badge bg-secondary badge-count">Kelas 6: 15</span>
-                            </div>
+                <!-- FASE 4: Parade -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour">
+                            10:11 - Selesai | Parade
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionRundown">
+                        <div class="accordion-body p-0">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>NO</th>
+                                        <th>DURASI</th>
+                                        <th colspan="2" class="text-center">WAKTU</th>
+                                        <th>KEGIATAN</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>32</td>
+                                        <td>15 Menit</td>
+                                        <td>10:11</td>
+                                        <td>10:26</td>
+                                        <td>Parade mobil hias, sepeda hias dan kendaraan hias</td>
+                                    </tr>
+                                    <tr>
+                                        <td>33</td>
+                                        <td>5 Menit</td>
+                                        <td>10:26</td>
+                                        <td>10:31</td>
+                                        <td>Barisan icon siswi akhir kelas 6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>34</td>
+                                        <td>30 Menit</td>
+                                        <td>10:31</td>
+                                        <td>11:01</td>
+                                        <td>Parade barisan</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <!-- Rebana -->
-                    <div class="card">
-                        <div class="card-body">
-                            <h6>Rebana</h6>
-                            <p class="small text-muted mb-2">Total: 39 Santri</p>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="badge bg-info text-dark badge-count">Kelas 1: 2</span>
-                                <span class="badge bg-info text-dark badge-count">Kelas 2: 26</span>
-                                <span class="badge bg-info text-dark badge-count">Kelas 3: 9</span>
-                                <span class="badge bg-info text-dark badge-count">Kelas 4: 2</span>
-                            </div>
-                        </div>
-                    </div>
-                   
-                </section>
-                <section id="ikon-kmi">
-                    <h3 class="section-title">C. Ikon Siswi Akhir KMI 2026</h3>
-                    <div class="card bg-light">
-                        <div class="card-body p-4">
-                            <h4 class="text-center mb-3">“LENTERA EMAS”</h4>
-                            <p class="narrative-text">
-                                “Di ufuk zaman yang terus berdenyut, di derasnya arus zaman yang tak pernah berhenti, Gontor tetap berdiri teguh, melahirkan generasi tangguh yang tak sekadar hadir. Mereka menjelma bak arsitek bagi hidupnya sendiri. Bukan lah pewaris pasif dari sejarah, mereka lah penafsir ulang makna peradaban. “THE GOLDEN AGE CATALYST,” Ketika dunia meragukan arah, merekalah kompas yang tak akan goyah. Inilah kami, generasi penerus 100 tahun Gontor, dengan bangga mempersembahkan, gemilang cahaya 1 abad. 
-                            </p>
-                            <p>
-                                “LENTERA EMAS”. Bukan sekadar alat penerang di tengah kegelapan malam, ialah simbol dari harapan yang selalu hidup. Lentera hadir tidak hanya untuk menerangi jalan, ia menyimpan makna yang tersirat, Ialah cahaya penerang kehidupan, membawa umat menuju kejayaan peradaban. Ia lah nyala abadi yang tak padam, menerangi lorong-lorong peradaban, mengangkat manusia dari gelap menuju puncak kejayaan yang beradab. 
-                            </p>
-                            <div class="alert alert-info text-center arabic-text" dir="rtl">
-                                وَمَا أُرِيدُ أَنْ أُخَالِفَكُمْ إِلَىٰ مَا أَنْهَاكُمْ عَنْهُ ۚ إِنْ أُرِيدُ إِلَّا الْإِصْلَاحَ مَا اسْتَطَعْتُ ۚ وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ ۚ عَلَيْهِ تَوَكَّلْتُ وَإِلَيْهِ أُنِيب
-                            </div>
-                            <p>
-                                “Dan aku tidak bermaksud menyelisihi kamu (dengan mengerjakan) apa yang aku larang darimu. Aku hanya bermaksud melakukan perbaikan semampuku. Dan tidak ada taufik bagiku melainkan dengan (pertolongan) Allah. Kepada-Nya aku bertawakal dan kepada-Nya aku kembali.” (QS. Hud: 88)
-                            </p>
-                            <p>
-                                Sebaik baiknya generasi, adalah generasi yang memperbaiki dan mengadakan perubahan. Mencoba merubah keadaan dengan kemampuan, melangkah maju dengan keteguhan dan kegigihan. Demi kokohya sebuah generasi, Gontor menanamkan dalam diri para santri keselarasan ikhtiar dan takdir, bahwa pada akhirnya, manusia hanya mampu berjalan sejauh ikhtiarnya, dan sejatinya, pencapaian bukanlah miliknya, karna dibalik setiap usaha, ada satu hal yang menentukan segalanya. 
-                            </p>
-                            <p>
-                                Berdiri kokoh menyongsong kemajuan, IMPERVIOUS GENERATION, bersama 464 pejuang sejati, kami melangkah dengan jejak yang tak pernah pudar, menggelorakan gema kejayaan, menyalurkan dentang panjang yang menggugah keteguhan. 
-                            </p>
-                            <p>
-                                Kamilah generasi tangguh, penggagas perubahan menuju era kejayaan, menjadi awal baru dari cahaya yang menerangi kegelapan, dan siap melangkah ke berbagai penjuru dunia. Menjadi penabur kebaikan, membawa kemuliaan peradaban di puncak kejayaan. Kami berjuang, menjadi penerus untuk menapaki puncak emas 100 tahun gontor, menjadi mundziru-l qoum dan munqidzu-l ummah. Dengan tetap berpegang teguh pada nilai pondok, falsafat falsafat yang terpatri pada diri kami, dan nasehat kyai kami “ kami mendidik kader untuk selalu to give, to give, to give, not to take, always to give.”.
-                            </p>
-                            <p>
-                                Dengan penuh harapan yang mendalam, kami mengharap doa dan ridha untuk IMPERVIOUS GENERATION, semoga langkah kami, pergerakan kami, dan apa yang kami ikhtiarkan menjadi pengabdian besar bagi umat dan bangsa.
-                            </p>
-                            <p class="fw-bold text-center mt-3" style="color: #D3A63F;">IMPERVIOUS GENERATION - 464 Pejuang Sejati</p>
-                        </div>
-                    </div>
-                </section>
+                </div>
+
             </div>
-            
-
-            <!-- Kolom Kanan: Narasi & Lirik -->
-            <div class="col-lg-7">
-
-                 <div class="card mt-4 border-0 shadow-sm">
-    <div class="card-header bg-dark text-white">
-        <h6 class="mb-0"><i class="bi bi-mic-fill me-2"></i>Live Music</h6>
-    </div>
-    <div class="card-body">
-        <!-- Lagu SyafaatMu -->
-        <div class="mb-4">
-            <h6 class="fw-bold text border-bottom pb-1" style="color: #70391D;">SyafaatMu</h6>
-            <p class="lyrics-text small text-muted mb-0">
-                Kudatang bawa jelaga, namun kasihMu Kau bentang<br>
-                Kumenyimpang dan lengah, justru karunia Kau hampar<br>
-                Di titik hilang setiaku, di detik itu Kau lindungiku<br><br>
-                SyafaatMu nan slalu kupinta, Ampunanmu nan slalu kudamba<br>
-                Luruhkanlah bukit tinggi dosaku yang belenggu hidupku<br>
-                Ulurkan tanganMu dan angkatku dari siksa nerakaMu<br><br>
-                Tak sanggup kuingkari cintaMu, keagungan tanda-tandaMu<br>
-                Ampunilah kelancangan hambaMu, Rasa tak sanggup kutatap nodaku
-            </p>
         </div>
+    </section>
+    <section id="petugas-acara" class="py-5 bg-light">
+        <div class="container">
 
-        <!-- Lagu Sempurna -->
-        <div>
-            <h6 class="fw-bold text border-bottom pb-1" style="color: #70391D;">Sempurna</h6>
-            <p class="lyrics-text small text-muted mb-0">
-                Lelah beban hidupmu hari ini<br>
-                Aku bagian dari cerita kamu takkan pernah sendiri<br>
-                Masa akan selalu menjadi penuntunmu<br>
-                Dengan segala macam prosesnya (2x)<br><br>
-                Wajar jika tak sempurna, kita hanya manusia<br>
-                Baik buruk adanya lewati hidup kita
-            </p>
+            <!-- B. Petugas Acara -->
+            <h2 class="text-center mb-4">Petugas <span class="gold-text">Acara</span></h2>
+
+            <!-- 1. Statistik Jumlah Petugas -->
+            <div class="row g-3 mb-5 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold gold-text mb-0">7</h3>
+                            <p class="small text-muted mb-0">Komandan Pleton</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold gold-text mb-0">1</h3>
+                            <p class="small text-muted mb-0">Komandan Upacara</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold gold-text mb-0">100</h3>
+                            <p class="small text-muted mb-0">Paskibra</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="fw-bold gold-text mb-0">2</h3>
+                            <p class="small text-muted mb-0">MC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Pasukan Inti Pengibar Bendera -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow">
+                        <div class="card-header bg-dark text-white py-3">
+                            <h5 class="mb-0 text-center">Pasukan Inti Pengibar Bendera</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th class="px-4">Nama</th>
+                                            <th>Bagian</th>
+                                            <th class="text-center">Kelas</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="px-4 fw-bold">Kinarya Adena Arsa</td>
+                                            <td>Pembawa Baki</td>
+                                            <td class="text-center"><span class="badge bg-secondary">4E</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 fw-bold">Queensa Java Budiveda</td>
+                                            <td>Pendamping Pembawa Baki</td>
+                                            <td class="text-center"><span class="badge bg-secondary">4F</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 fw-bold">Aghniya Naila Althaf</td>
+                                            <td>Pengibar Bendera</td>
+                                            <td class="text-center"><span class="badge bg-secondary">4B</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-4 fw-bold">Azzarfa Nur Arizty</td>
+                                            <td>Pembentang Bendera</td>
+                                            <td class="text-center"><span class="badge bg-secondary">4I</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- C. Formasi & Filosofi -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10 text-center">
+                    <h2 class="mb-4">Formasi & Filosofi <span class="gold-text">Paskibra</span></h2>
+
+                    <div class="formasi-container p-3 bg-white rounded shadow-sm mb-4">
+                        <!-- Ganti 'path/to/formasi-catalyst.jpg' dengan link file gambar Anda -->
+                        <img src="assets/img/CATALYST.png" alt="Formasi CATALYST Paskibra" class="img-fluid rounded"
+                            style="max-height: 300px; width: auto;">
+                    </div>
+
+                    <div class="filosofi-text">
+                        <h4 class="fw-bold gold-text">"CATALYST"</h4>
+                        <blockquote class="blockquote" style="text-align: justify;"></blockquote>
+                        <p class="text-muted fst-italic px-md-5">
+                            Filosofi Formasi:
+                            <br>9 Titik Merah: Melambangkan Pondok Modern Darussalam Gontor yang berdiri di atas 2
+                            landasan yaitu 5 panca jiwa dan 4 Moto Pondok yang menjadi landasan karakter santriwati yang
+                            berpegang teguh kepada keimanan dan ketaqwaan kepada Allah SWT.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-                <section id="lirik" class="mt-4">
-                    <h3 class="section-title">D. Teks Lirik & Lagu</h3>
-                    <div class="row g-3">
-                        <!-- Rebana -->
+    </section>
+    <!-- Bagian C: Filosofi -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Filosofi <span class="gold-text">Catalyst</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <blockquote class="blockquote" style="text-align: justify;">
+                        <br>CATALYST : secara umum berarti “katalis” atau pemicu sesuatu yang mempercepat terjadinya
+                        perubahan tanpa kehilangan jati dirinya. Dalam konteks organisasi atau generasi, catalyst
+                        dimaknai sebagai penggerak utama yang menghadirkan energi baru, mendorong transformasi, dan
+                        menjadi titik awal lahirnya kemajuan yang lebih besar.
+                        <br>"Catalyst" adalah bentuk representasi bahwa siswi akhir KMI 2027 merupakan The Agent of
+                        Change atau generasi penggagas perubahan besar menuju era kejayaan di tahun pertama pada abad
+                        kedua Gontor. Generasi yang tangguh dalam mengupayakan perbaikan umat dan menegakkan kebenaran,
+                        teguh dalam mempertahankan prinsip Islam, identitas, dan nilai gontori, kokoh dalam integritas,
+                        serta dinamis meningkatkan kualitas umat demi mewujudkan pusat peradaban dunia.
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian D: Profil Penampilan & Lirik -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Lirik Lagu & Penampilan</h2>
+
+            <ul class="nav nav-pills mb-4 justify-content-center" id="tabLirik">
+                <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill"
+                        data-bs-target="#rebana">Rebana</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill"
+                        data-bs-target="#angklung">Angklung</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#saman">Tari
+                        Saman</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#masal">Tari
+                        Masal</button></li>
+                <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#livemusic">Live
+                        Music</button></li>
+            </ul>
+
+            <div class="tab-content border p-4 bg-white shadow-sm rounded">
+                <!-- Lirik Rebana -->
+                <div class="tab-pane fade show active" id="rebana">
+                    <div class="row">
+                        <div class="col-md-6 text-center border-end">
+                            <h5 class="gold-text">بِرَسُولِ اللَّهِ</h5>
+                            <p class="arabic-text">
+                                بِرَسُولِ اللَّهِ وَالْبَدَوِي<br>
+                                وَرِجَالٍ مِنْ بَنِي عَلَوِي<br>
+                                سَلَكُوا فِي الْمَنْهَجِ النَّبَوِي
+                            </p>
+                            <p>
+                                Wajah tersenyum indah berseri<br>
+                                Akhlaq mulia juga terpuji<br>
+                                Begitu cinta kepada kami<br>
+                                Wahai ibunda pelita hati
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-center border-end" style="max-height: 300px; overflow-y: auto;">
+                            <h5 class="gold-text">يَا شَيْخِي يَا مُرَبِّي</h5>
+                            <p class="arabic-text">
+                                يَا شَيْخِي يَا مُرَبِّي<br>
+                                يَا رُوحِي وَجَسَدِي (٢×)
+                            </p>
+                            <p>
+                                Wahai kekeasih hati<br>
+                                Kami rindu sekali<br>
+                                Ingin dinasehati<br>
+                                Olehmu ya Murobbi 2×
+                            </p>
+                            <p>
+                                Kini pada siapa<br>
+                                Nasehat kami pinta<br>
+                                Kini pada siapa<br>
+                                Kami berkeluh kesah 2×
+                            </p>
+                            <p>
+                                Alm. Ustadz Amal Fathullah Zarkasyi<br>
+                                Kau titipkan kami<br>
+                                Putra Putri Terbaik<br>
+                                Menimba Ilmu Suci<br>
+                                Untuk umat dan negri 2X
+                            </p>
+                            <p>
+                                Sungguh besar jasamu<br>
+                                Pada kami Kiai<br>
+                                Kami murid muridmu<br>
+                                Kan istiqomah slalu 2X
+                            </p>
+                            <p class="arabic-text">
+                                يَا شَيْخِي يَا مُرَبِّي<br>
+                                يَا رُوحِي وَجَسَدِي (٢×)
+                            </p>
+                            <p>
+                                Telah Berlalu hari<br>
+                                Kau selalu dihati<br>
+                                Tetap hidup tak mati<br>
+                                Di sisi Allah Rabbi
+                            </p>
+                            <p>
+                                Wahai pujaan hati<br>
+                                Obati rindu ini<br>
+                                Datangi diri ini<br>
+                                Walau hanya di mimpi
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="row">
+                        <div class="col-md-6 text-center border-end"
+                            style="max-height: 250px; overflow-y: auto; padding-right: 10px;">
+                            <h5 class="gold-text">Ngawiti Ingsun</h5>
+                            <p>
+                                Ngawiti ingsun luru ilmu<br>
+                                Sebab ilmu iku porlu diluru<br>
+                                Pados ilmu agomo<br>
+                                Awit enom sampe tuwo<br>
+                                Ojo lali diawiti kale dungo
+                            </p>
+                            <p class="arabic-text">
+                                رَضِيْتُ بِاللهِ رَبًّا<br>
+                                وَبِالْإِسْلَامِ دِيْنًا<br>
+                                وَبِمُحَمَّدٍ نَبِيًّا وَرَسُوْلًا
+                            </p>
+                            <p>
+                                Gusti Allah Pangeran kulo<br>
+                                Islam Agomo kulo<br>
+                                Nabi Muhammad Bendoro kulo<br>
+                                Al Qur’an Panutan kulo
+                            </p>
+                            <p>
+                                Gusti Allah maha agung Islam agomo adiluhung<br>
+                                Syafaat nabi ugi saget ndamel pitulung
+                            </p>
+                            <p class="arabic-text">
+                                رَضِيْتُ بِاللهِ رَبًّا<br>
+                                وَبِالْإِسْلَامِ دِيْنًا<br>
+                                وَبِمُحَمَّدٍ نَبِيًّا وَرَسُوْلًا
+                            </p>
+                            <p>
+                                Pados ilmu kagem ngertos pangerane<br>
+                                Saget tumut sunah nabi lan rosule 2X<br>
+                                Mugi manfaat dunyo lan akhirate 2X
+                            </p>
+                            <p>
+                                Cah ayo cah Semangat golek ilmune<br>
+                                Cah ayo cah Seng semangat ngibadahe<br>
+                                Cah Ayo cah Dikejar cita citane<br>
+                                Cah ayo cah Kabul hajate
+                            </p>
+                            <p class="arabic-text">
+                                رَبِّ زِدْنِي عِلْمًا<br>
+                                وَارْزُقْنِي فَهْمًا 4X
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-center border-end">
+                            <h5 class="gold-text">مَوْلَايَ صَلِّ</h5>
+                            <p class="arabic-text">
+                                مَوْلَايَ صَلِّ عَلَى حَبِيبِكَ الْمُصْطَفَى<br>
+                                سَلِّمْ يَا رَبِّ عَلَى نَبِيِّكَ الْمُجْتَبَى
+                            </p>
+                            <p class="arabic-text">
+                                وَنِلْنَا مَدَحَ مُحَمَّدٍ وَبَارِكْنَا صِدِّيقًا<br>
+                                خَيْرُ الصِّدِّيقِ صِدِّيقِ سَيِّدِ الْخُلَفَاءِ
+                            </p>
+                            <p class="arabic-text">
+                                نَرْجُو مِنْ فَضْلِ الْمَوْلَى<br>
+                                أَنْعِمْ لَنَا بِالشِّفَاءِ
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="angklung">
+                    <!-- Lirik Angklung -->
+                    <div class="row">
+                        <div class="col-md-6 text-center border-end"
+                            style="max-height: 250px; overflow-y: auto; padding-right: 10px;">
+                            <h5 class="gold-text">Takkan Terlupa</h5>
+                            <p>
+                                Senyummu sederhana<br>
+                                Langkahmu bersahaja<br>
+                                Hidupmu gambarkan kesederhanaan<br>
+                                Begitu damai dalam keikhlasan
+                            </p>
+                            <p>
+                                Wajahmu mengingatkanku akan indahnya sebuah perjuangan<br>
+                                Terus melangkah walau sering hati terluka<br>
+                                Tak pernah letih tuk raih Ridha-Nya
+                            </p>
+                            <p>
+                                Takkan terlupa terukir indah selamanya<br>
+                                Seluruh petuah dan doa kan menjadi satu iringi setiap langkahku<br>
+                                Sampai nanti matahari tak terbit lagi<br>
+                                Jasamu kan indah abadi<br>
+                                Kau slalu dihati terimakasihku untukmu
+                            </p>
+                            <p>
+                                Kata katamu buat kupercaya<br>
+                                Akan keajaiban sebuah doa<br>
+                                Kau ajarkan aku tuk jalani hidup ini<br>
+                                Tak menyerah takkan berputus asa
+                            </p>
+                            <p>
+                                Bila memang waktu akan memisahkan kita<br>
+                                Meninggalkan seluruh cerita indah<br>
+                                Kita yang dulu selalu bersama<br>
+                                Seluruh perjuangan ini takkan terlupa
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-center border-end"
+                            style="max-height: 250px; overflow-y: auto; padding-right: 10px;">
+                            <h5 class="gold-text">Damai di Gontor Putri</h5>
+                            <p>
+                                Menyapa Mentari dengan penuh senyuman<br>
+                                Kesemangatan dalam perjuangan<br>
+                                Pengorbanan tinggalkan kampung halaman<br>
+                                Demi Ilmu dan Pendidikan
+                            </p>
+                            <p>
+                                Berlayar di tengah penuh kelembutan<br>
+                                Kesabaran, Hadapi cobaan<br>
+                                Berteduh di bawah naungan awan<br>
+                                Keteguhan, temani perjalanan
+                            </p>
+                            <p>
+                                Memandang sinaran rembulan<br>
+                                Bersimpuh di malam berbalutkan dengan do'a<br>
+                                Mengharapkan atas segala impian<br>
+                                Keridhoan istiqomah perjuangan
+                            </p>
+                            <p>
+                                Senyummu hadirkan kekuatan<br>
+                                Sinarkan keteguhan<br>
+                                Bersama do’a gapai impian
+                            </p>
+                            <p>
+                                Semangatmu beri keberhasilan<br>
+                                Pancarkan kemenangan<br>
+                                Kebersamaan Damai di Gontor Putri…
+                            </p>
+                            <p>
+                                Memandang sinaran rembulan<br>
+                                Bersimpuh di malam berbalutkan dengan do'a<br>
+                                Mengharapkan atas segala impian<br>
+                                Keridhoan istiqomah perjuangan<br>
+                                Damai di Putri 3… (2x)<br>
+                                Damai di Putri 3…
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tari Saman -->
+                <div class="tab-pane fade text-center" id="saman">
+                    <div class="text-center" style="max-height: 500px; overflow-y: auto; padding: 10px;">
+
+                        <p>
+                            Alfatihah<br>
+                            Alfatihah Al-Baqarah<br>
+                            Ali imran, Annisa Almaidah alan'am Al a'raf..
+                        </p>
+
+                        <p>
+                            Is Iskandar muda raja-raja yang Adee<br>
+                            Leupah-leupah that Aref<br>
+                            Aref meu SE U nama<br>
+                            Aceh-aceh that megah ban<br>
+                            Laban saboh Donya
+                        </p>
+
+                        <p>
+                            Masa-masa perintah Iskandar muda<br>
+                            Saboh rangkang ta karang dua<br>
+                            Saboh rangkang ta karang Meu pheut<br>
+                            Saboh rangkang ta karang meuNam<br>
+                            Sinan PU bhut, sino Dalang
+                        </p>
+
+                        <p>
+                            Sinaroh sinaroh kipah<br>
+                            Kipah kipah Sinaroh (2x)
+                        </p>
+
+                        <p>
+                            Amin Allah, Amiin Allahumma Amiin<br>
+                            Ureung Mukmin geu Lake Lake Doa<br>
+                            Lale lale bek Tanyoe Lale<br>
+                            Hana Jantate umue ka Tuha
+                        </p>
+
+                        <p>
+                            Puteh ngon Janggot Kuneng Ngon Misee<br>
+                            Han thom Ta combe tika Musholla
+                        </p>
+
+                        <p>
+                            Hina lam Donya.. Hana pakaian<br>
+                            Hina bak tuhan.. ileme Hana<br>
+                            Hina bak wareh.. meuh pirak Han pih Tan<br>
+                            Hina bak Rakan.. beut Jaroe Hana
+                        </p>
+
+                        <p>
+                            Palet palet bak baho, Boh-grek², grek intan<br>
+                            Palet-palet bak badan, Krang kreng Mutia
+                        </p>
+
+                        <p>
+                            Bukon-bukon Lee sayang, Lon ka lon KA leun pade<br>
+                            Dih pot angen-angen Glee, Reubah-reubah meutimpa
+                        </p>
+
+                        <p>
+                            Hai kutite bungkoh ma hai kutite<br>
+                            Hai kutimang payong keumang boh hatee ma..
+                        </p>
+
+                        <p>
+                            Lam donya-donya Pujo ke Tuhan<br>
+                            Uroe Ngon malam bek sagai Lupa
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Tari Masal -->
+                <div class="tab-pane fade" id="masal">
+                    <div class="row text-center">
+                        <!-- Jangi Janger -->
+                        <div class="col-md-4 mb-4">
+                            <div class="border rounded p-3 bg-light" style="max-height: 300px; overflow-y: auto;">
+                                <h6 class="gold-text">Jangi Janger (Bali)</h6>
+                                <p class="small">
+                                    Jangi janger....<br>
+                                    Sengsengin sengseng janger....<br>
+                                    Sengsengin sengseng janger....<br>
+                                    Serere Nyoman ngeyorin....<br>
+                                    Kelap-kelap ngalap bunga....<br>
+                                    Langsing lanjar pamulune nyandat gading....<br>
+                                    Saruang jani... mejangeran<br>
+                                    Sariang entur rota roti...<br>
+                                    Arasijang jangi janger (2x)<br>
+                                    Arasijang jangi janger (2x)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Cik Cik Periuk -->
+                        <div class="col-md-4 mb-4">
+                            <div class="border rounded p-3 bg-light" style="max-height: 300px; overflow-y: auto;">
+                                <h6 class="gold-text">Cik Cik Periuk (Kalbar)</h6>
+                                <p class="small">
+                                    Cik cik periuk bilanga sumping dari jawe<br>
+                                    Datang nek kecibook bawa kepiting dua ekook<br>
+                                    Cik cik periuk bilanga sumping dari jawe<br>
+                                    Datang nek kecibook bawa kepiting dua ekook<br>
+                                    Cak bur dalam bilanga picak iddung gigi rongak<br>
+                                    Sape kitawa dolok dipancung raja tunggal
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Andam Oi -->
+                        <div class="col-md-4 mb-4">
+                            <div class="border rounded p-3 bg-light" style="max-height: 300px; overflow-y: auto;">
+                                <h6 class="gold-text">Andam Oi (Sumbar)</h6>
+                                <p class="small">
+                                    Andam oi andam... oi andam oi (2x)<br>
+                                    Bukiktinggi Koto Rang Agam yo andam oi<br>
+                                    Mandaki janjang ampek puluah<br>
+                                    Babelok jalan ka Malalak -2x<br>
+                                    Sakik sagadang bijo bayam yo andam oi<br>
+                                    Sakik bak raso ka mambunuah<br>
+                                    Di ubek indak namuah cegak<br>
+                                    Andam oi andam... oi andam oi (2x)<br>
+                                    Bukan denai takuik mandi yo andam oi<br>
+                                    Denai nan takuik basah-basah<br>
+                                    Mandi ka Lubuak Pariangan<br>
+                                    Bukan denai takuik mati yo andam oi<br>
+                                    Denai nan takuik patah-patah<br>
+                                    Badan nan sadang batunangan<br>
+                                    Andam oi andam... oi andam oi (2x)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Bandung -->
+                        <div class="col-md-4 mb-4">
+                            <div class="border rounded p-3 bg-light" style="max-height: 300px; overflow-y: auto;">
+                                <h6 class="gold-text">Salira teh Bandung (Jabar)</h6>
+                                <p class="small">
+                                    Sajauh ning panginditan<br>
+                                    Satebih hing lelengkahan<br>
+                                    Heup dimana diri miara<br>
+                                    Mulang tetep ka salira<br>
+                                    Dina teuteup unggal juru<br>
+                                    Aya carita nu nyentuh kalbu<br>
+                                    Kagagas kabayang bayang<br>
+                                    Saban wayah mawa tenang<br>
+                                    Ku endahna, Ku Asihna<br>
+                                    Nu mitetep matri dina ati<br>
+                                    Matak betah tumaninah 3x<br>
+                                    Nu dijungjung, Dipiluhung<br>
+                                    Lembur tempatna indung ngakandung<br>
+                                    Salira teh Bandung 3x<br>
+                                    Ningnang nineung rerendengan<br>
+                                    Cumarita pacantel rasa<br>
+                                    Huhujanan Paduduaan<br>
+                                    Duh urang micinta<br>
+                                    Nang ning ning nang (3x)
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Putri Balantak -->
+                        <div class="col-md-4 mb-4">
+                            <div class="border rounded p-3 bg-light" style="max-height: 300px; overflow-y: auto;">
+                                <h6 class="gold-text">Putri Balantak (Sulteng)</h6>
+                                <p class="small">
+                                    Kobelesan ma i Putrid balantak<br>
+                                    Mongla boti sawememola<br>
+                                    Kabea mai putri balantak<br>
+                                    Sangen onsulen, Ala masatia<br>
+                                    Paa seon ma I Putrid balantak<br>
+                                    Edenang insian mensalamai<br>
+                                    Inti intikan, Nalalo nalipu<br>
+                                    Mamako noa, Mai dadi mo riku<br>
+                                    Oskonon mai Putrid balantak<br>
+                                    Edenan insian, Sawe maimo<br>
+                                    Mama reirei, Lipu balantak<br>
+                                    Sidutu manginai, Kai putrid balantak
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Prau Layar -->
+                        <div class="col-md-4 mb-4">
+                            <div class="border rounded p-3 bg-light" style="max-height: 300px; overflow-y: auto;">
+                                <h6 class="gold-text">Prau Layar (Jateng)</h6>
+                                <p class="small">
+                                    Yo konco ning nggisik gembiro<br>
+                                    Anglerap-lerap banyune segoro<br>
+                                    Angliyak numpak prau layar<br>
+                                    Ing dino minggu keh pariwisoto<br>
+                                    Alon praune wis nengah<br>
+                                    Byak byuk byak banyu pinelah<br>
+                                    Ora jemu-jemu karo mesem ngguyu<br>
+                                    Ngilangake roso lungkrah lesu<br>
+                                    Adik njawil diks, Jebul wis sore<br>
+                                    Witing kalopo katon ngawe-awe<br>
+                                    Prayogane becik balik wae<br>
+                                    Dene sesuk esuk tumandang nyambut gawe
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="livemusic">
+                    <div class="text-center" style="max-height: 500px; overflow-y: auto; padding: 10px;">
+                        <!-- Lagu Pertama -->
+                        <h5 class="gold-text">SyafaatMu</h5>
+                        <p>
+                            Kudatang bawa jelaga, namun KasihMu Kau bentang<br>
+                            Ku menyimpang dan lengah, Justru karunia Kau hampar<br>
+                            Di titik hilang setiaku, di detik Itu Kau lindungiku<br>
+                            Di palung terdalam dosaku, CahayaMu menyentuhku
+                        </p>
+                        <p>
+                            SyafaatMu nan slalu kupinta, Ampunanmu nan slalu kudamba<br>
+                            Luruhkanlah bukit tinggi dosaku yang belenggu hidupku<br>
+                            SyafaatMu nan slalu kupinta, Ampunanmu nan slalu kudamba<br>
+                            Ulurkan tanganMu dan angkatku Dari siksa nerakaMu
+                        </p>
+                        <p>
+                            Kecongkakanku menipuku, Engkaulah Oh Sang Pencipta<br>
+                            Tak sanggup kuingkari cintaMu, Keagungan tanda-tandaMu<br>
+                            Ampunilah kelancangan hambaMu Rasa tak sanggup kutatap…<br>
+                            Ampunilah kelancangan hambaMu Rasa tak sanggup kutatap nodaku
+                        </p>
+
+                        <hr class="my-4">
+
+                        <!-- Lagu Kedua -->
+                        <h5 class="gold-text">Sempurna</h5>
+                        <p>
+                            Lelah beban hidupmu hari ini<br>
+                            Aku bagian dari cerita<br>
+                            Kamu takkan pernah sendiri<br>
+                            Masa akan selalu menjadi penuntunmu
+                        </p>
+                        <p>
+                            Dengan segala macam prosesnya<br>
+                            Wajar jika tak sempurna, kita hanya Manusia<br>
+                            Baik buruk adanya lewati hidup kita
+                        </p>
+                        <p>
+                            Bila terasa susah,<br>
+                            Mimpi tuk jadi nyata<br>
+                            Semua do'a dan air mata mengalir
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-rentetan py-5">
+        <div class="container-fluid px-lg-5" style="color: #351709;">
+            <div class="row">
+                <div class="col-lg-8 text-start mb-4 mb-lg-0">
+                    <h5 class="text-uppercase mb-3"
+                        style="letter-spacing: 2px; border-bottom: 2px solid #D3A63F; display: inline-block; padding-bottom: 5px; font-weight: bold;">
+                        Tim Redaksi</h5>
+                    <div class="row">
                         <div class="col-md-6">
-                            <div class="lyrics-box">
-                                <div class="lyrics-title">Birosulillahi Wal Badawi</div>
-                                <p class="small">
-                                    <strong>Birosulillahi Wal Badawi<br></strong>
-                                    Wa Rijaalin Min Banii ‘Alawi<br>
-                                    Salaku Fil Manhajin Nabawi<br>
-                                    Wajah tersenyum indah berseri<br>
-                                    Akhlaq mulia juga terpuji<br>
-                                    Begitu cinta kepada kami<br>
-                                    Wahai ibunda pelita hati<br>
-
-                                </p>
-                            </div>
+                            <p class="mb-1"><strong>Penasihat:</strong> Al-Ustadz Dr.Nurul Salis Alamin, M.Pd.I.</p>
+                            <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
                         </div>
-                        <div class="col-md-12"> <!-- Gunakan col-12 agar kotaknya lebar dan bisa dibagi 2 kolom internal -->
-    <div class="lyrics-box">
-        <div class="lyrics-title">Ya Syaikhi Ya Murobbi & Ngawiti Ingsun</div>
-        <div class="lyrics-content small">
-            <!-- Bagian Pertama -->
-            <p>
-                <strong>Ya Syaikhi Ya Murobbi</strong><br>
-                Ya Ruhi Wa Jasadi 2×<br>
-                Wahai kekeasih hati, Kami rindu sekali<br>
-                Ingin dinasehati Olehmu ya Murobbi 2×<br><br>
-                Kini pada siapa Nasehat kami pinta<br>
-                Kini pada siapa Kami berkeluh kesah 2×<br><br>
-                <em>Alm. Ustadz Amal Fathullah Zarkasyi</em><br>
-                Kau titipkan kami Putra Putri Terbaik<br>
-                Menimba Ilmu Suci Untuk umat dan negri 2X<br><br>
-                Sungguh besar jasamu Pada kami Kyai<br>
-                Kami murid muridmu Kan istiqomah slalu 2X<br><br>
-                Telah Berlalu hari Kau selalu dihati<br>
-                Tetap hidup tak mati Di sisi Allah Rabbi<br>
-                Wahai pujaan hati Obati rindu ini<br>
-                Datangi diri ini Walau hanya di mimpi
-            </p>
-
-            <!-- Bagian Kedua -->
-            <p>
-                <strong>Ngawiti Ingsun Luru Ilmu</strong><br>
-                Sebab ilmu iku porlu diluru<br>
-                Pados ilmu agomo Awit enom sampe tuwo<br>
-                Ojo lali diawiti kale dungo<br><br>
-                <em>Roditubillahi Robba...</em><br>
-                Gusti Allah Pangeran kulo, Islam Agomo kulo<br>
-                Nabi Muhammad Bendoro kulo, Al Qur’an Panutan kulo<br><br>
-                Gusti Allah maha agung Islam agomo adiluhung<br>
-                Syafaat nabi ugi saget ndamel pitulung<br><br>
-                Pados ilmu kagem ngertos pangerane<br>
-                Saget tumut sunah nabi lan rosule 2X<br>
-                Mugi manfaat dunyo lan akhirate 2X<br><br>
-                Cah ayo cah Semangat golek ilmune<br>
-                Cah ayo cah Seng semangat ngibadahe<br>
-                Cah Ayo cah Dikejar cita citane, Kabul hajate<br>
-                <strong>Robbi zidni ‘ilman War Zuqni Fahman 4X</strong>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="col-md-6">
-                            <div class="lyrics-box">
-                                <div class="lyrics-title">-Madaihuna-</div>
-                                <p class="small">
-                                    <strong>Maulaya Sholli ‘Ala Habibikal Mustofa<br></strong>
-                                    Salim ya robbi ‘Ala nabiyikal Mujtaba<br>
-                                    Wanilamdah Muhammad Wa babarikni siddiq<br>
-                                    Khoirol siddiqi siddiqi<br>
-                                    Sayyidil Khulafa Narju min Fadlil maulaa Ani’imlana bi Syifa<br>                               
-                                </p>
-                            </div>
+                        <div class="col-md-6">
+                            <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania,
+                                Al-Ustadzah A'izzaty Alifatul Urfi, Al-Ustadzah Sri Wahyuni </p>
+                            <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea
+                                El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
                         </div>
-                        <!-- Tari Massal -->
-                        <div class="col-12 mt-4">
-    <div class="card shadow-sm border-0">
-        <div class="card-header bg-success text-white py-3">
-            <h5 class="mb-0 fw-bold">Medley Tari Massal & Lagu Daerah</h5>
-        </div>
-        <div class="card-body">
-            <!-- Baris Pertama: Bali, Kalimantan, Sumatera -->
-            <div class="row g-4 border-bottom pb-4 mb-4">
-                <div class="col-md-4 border-end">
-                    <h6 class="fw-bold" style="color: #351709;">Jangi Janger (Bali)</h6>
-                    <div class="lyrics-text small text-muted">
-                        Arasijang jangi janger...<br>
-                        Sengsengin sengseng janger...<br>
-                        Serere Nyoman ngeyorin...<br>
-                        Kelap-kelap ngalap bunga...<br><br>
-                        Langsing lanjar pamulune nyandat gading...<br>
-                        Saruang jani mejangeran...<br>
-                        Sariang entur rota roti...<br>
-                        Arasijang jangi janger...
                     </div>
                 </div>
-
-                <div class="col-md-4 border-end">
-                    <h6 class="fw-bold" style="color: #351709;">Cik Cik Periuk (Kalimantan)</h6>
-                    <div class="lyrics-text small text-muted">
-                        Cik cik periuk bilanga sumping dari jawe<br>
-                        Datang nek kecibook bawa kepiting dua ekook<br>
-                        Cak bur dalam bilanga, picak iddung gigi rongak<br>
-                        Sape kitawa dolok dipancung raja tunggal
+                <div class="col-lg-4 text-lg-end text-start">
+                    <div class="mb-2">
+                        <h5 class="text-uppercase mb-0">Panitia PKA 2026</h5>
+                        <h5 class="text-uppercase mb-0">Gontor Putri Kampus 3</h5>
+                        <p class="text-black-50">Pondok Modern Darussalam Gontor Putri Kampus 3</p>
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <h6 class="fw-bold" style="color: #351709;">Andam Oi (Sumatera)</h6>
-                    <div class="lyrics-text small text-muted">
-                        Andam oi andam... oi andam oi <br>
-Andam oi andam... oi andam oi <br>
-Bukiktinggi Koto Rang Agam yo andam oi <br>
-Mandaki janjang ampek puluah <br>
-Babelok jalan ka Malalak -2x <br>
-Sakik sagadang bijo bayam yo andam oi <br>
-Sakik bak raso ka mambunuah <br>
-Di ubek indak namuah cegak <br>
-
-Andam oi andam... oi andam oi <br>
-Andam oi andam... oi andam oi <br>
-Bukan denai takuik mandi yo andam oi <br>
-Denai nan takuik basah-basah <br>
-Mandi ka Lubuak Pariangan -2x <br>
-Bukan denai takuik mati yo andam oi <br>
-Denai nan takuik patah-patah <br>
-Badan nan sadang batunangan <br>
-
-Andam oi andam... oi andam oi <br>
-Andam oi andam... oi andam oi
-                    </div>
-                </div>
-            </div>
-
-            <!-- Baris Kedua: Jawa Barat, Sulawesi, Jawa Tengah (Prau Layar) -->
-            <div class="row g-4">
-                <div class="col-md-4 border-end">
-                    <h6 class="fw-bold" style="color: #351709;">Bandung (Jawa Barat)</h6>
-                    <div class="lyrics-text small text-muted">
-                        Tentu, ini lirik lagu Salira teh Bandung dengan tag <br> di setiap akhir barisnya:
-
-Sajauh ning panginditan <br>
-Satebih hing lelengkahan <br>
-Heup dimana diri miara <br>
-Mulang tetep ka salira <br>
-<br>
-Dina teuteup unggal juru <br>
-Aya carita nu nyentuh kalbu <br>
-Kagagas kabayang bayang <br>
-Saban wayah mawa tenang <br>
-<br>
-Ku endahna <br>
-Ku Asihna <br>
-Nu mitetep matri dina ati <br>
-Matak betah tumaninah 3x <br>
-<br>
-Nu dijungjung <br>
-Dipiluhung <br>
-Lembur tempatna indung ngakandung <br>
-Salira teh Bandung 3x <br>
-<br>
-Ningnang nineung rerendengan <br>
-Cumarita pacantel rasa <br>
-Huhujanan Paduduaan <br>
-Duh urang micinta <br>
-<br>
-Nang ning ning nang <br>
-Nang ning ning nang <br>
-Nang ning ning nang <br>
-Nang ning ning nang eu 3x
-                    </div>
-                </div>
-
-                <div class="col-md-4 border-end">
-                    <h6 class="fw-bold" style="color: #351709;">Medley Sulawesi</h6>
-                    <div class="lyrics-text small text-muted">
-                        <em>(Instrumental Medley Budaya Sulawesi)</em><br>
-                        Menampilkan ritme khas Celebes yang dinamis<br>
-                        dan gerakan tari yang melambangkan keteguhan<br>
-                        serta kehangatan masyarakat Sulawesi.
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <h6 class="fw-bold" style="color: #351709;">Prau Layar (Jawa Tengah)</h6>
-                    <div class="lyrics-text small text-muted">
-                        Yo konco ning nggisik gembiro <br>
-Anglerap-lerap banyune segoro <br>
-Angliyak numpak prau layar <br>
-Ing dino minggu keh pariwisoto 3x <br>
-Alon praune wis nengah <br>
-Byak byuk byak banyu pinelah <br>
-Ora jemu-jemu karo mesem ngguyu <br>
-Ngilangake roso lungkrah lesu 3x <br>
-<br>
-Adik njawil dik <br>
-Jebul wis sore <br>
-Witing kalopo katon ngawe-awe <br>
-Prayogane becik balik wae <br>
-Dene sesuk esuk <br>
-Tumandang nyambut gawe 3x <br>
+                    <div class="small text-black-50 mt-4">
+                        Copyright &copy; PKA 2026 Gontor Putri Kampus 3
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card-footer bg-light text-center py-2">
-            <small class="text-muted italic">Harmoni Nusantara - Pekan Perkenalan 1447 H</small>
-        </div>
-    </div>
-</div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </main>
-
-<footer class="footer-rentetan py-5">
-    <div class="container-fluid px-lg-5" style="color: #351709;"> 
-        <div class="row">
-            <div class="col-lg-8 text-start mb-4 mb-lg-0">
-                <h5 class="text-uppercase mb-3" style="letter-spacing: 2px; border-bottom: 2px solid #D3A63F; display: inline-block; padding-bottom: 5px; font-weight: bold;">Tim Redaksi</h5>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="mb-1"><strong>Penasihat:</strong> Al-Ustadz Dr.Nurul Salis Alamin, M.Pd.I.</p>
-                        <p class="mb-1"><strong>Pembimbing:</strong> Al-Ustadz Farouq Muhammad Syarif, S.Fill.I.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="mb-1"><strong>Tim Penulis:</strong> Al-Ustadzah Maghfiro Ihzani Maulania, Al-Ustadzah A'izzaty Alifatul Urfi, Al-Ustadzah Sri Wahyuni </p>
-                        <p class="mb-1"><strong>Tim Layout:</strong> Al-Ustadzah Siti Avila Amadea, Al-Ustadzah Dea El Syifana Qurratu'ain, Al-Ustadzah Erina Aristawidya Karsono</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 text-lg-end text-start">
-                <div class="mb-2">
-                    <h5 class="text-uppercase mb-0">Panitia PKA 2026</h5>
-                    <h5 class="text-uppercase mb-0">Gontor Putri Kampus 3</h5>
-                    <p class="text-black-50">Pondok Modern Darussalam Gontor Putri Kampus 3</p>
-                </div>
-                <div class="small text-black-50 mt-4">
-                    Copyright &copy; PKA 2026 Gontor Putri Kampus 3
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
-    <!-- Bootstrap JS -->
+    </footer>
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
