@@ -15,7 +15,7 @@ NO;ROOM;SECTION;TOTAL;
 11;Lahore 10;Language Advisory Council;8;Teachers
 12;Hijaz 01;CID Supervisor;10;Teachers
 ;;JMQ & JMH Supervisor;7;Teachers
-13;KOPDA Guru;Teacher Kitchen Staff;9;Teachers
+13;KOPDA Guru;Teacher Kitchen Staff;8;Teachers
 14;2K;Cafetaria and Cooperation Supervisor;6;Teachers
 ;;Public Service Staff;6;Teachers
 15;DLP;La Tansa Resto Staff;10;Teachers
@@ -37,4 +37,4 @@ NO;ROOM;SECTION;TOTAL;
 30;Syanggit 10;Provision Staff;6;Teachers
 31;Al-Azhar 210;Library Staff;7;Teachers
 32;Markaz Khot;Markaz Khot;3;Teachers
-TOTAL;;;322;Teachers
+TOTAL;;;321;Teachers
