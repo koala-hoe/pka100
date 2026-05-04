@@ -319,7 +319,7 @@
 
 
 <script>
-async function muatData(jenis) {
+async function muatData(jenis, config = { totalTextCol: 4, totalValueCol: null }) {
     const wadah = document.getElementById('myAreaChart'); 
     const judul = document.getElementById('judul-chart');
     const spinner = document.getElementById('loading-spinner');
@@ -341,32 +341,25 @@ async function muatData(jenis) {
                 row.forEach(cell => { html += `<th class="text-center">${cell}</th>`; });
                 html += `</tr></thead><tbody>`;
             } else {
-                const isTotalRow = row[0] && row[0].toString().toUpperCase().includes("TOTAL");
-                if (isTotalRow) {
-                    let jmlCol = row.length;
-                    const totalValue = row[jmlCol - 2] || row[jmlCol - 1]; 
-                    html += `<tr class="table-secondary fw-bold">
-                                <td colspan="${jmlCol - 1}" class="text-center">TOTAL</td>
-                                <td>${totalValue}</td>
-                             </tr>`;
-                } else {
-                    html += `<tr>`;
-                    row.forEach((cell, colIndex) => {
-                        let content = cell ? cell.trim() : "";
-                        if (colIndex < 2 && (content === "" || content === "-")) return; 
-                        let rowspan = 1;
-                        if (colIndex < 2 && content !== "") {
-                            for (let i = rowIndex + 1; i < data.length; i++) {
-                                let nextCell = data[i][colIndex] ? data[i][colIndex].trim() : "";
-                                if (nextCell === "" || nextCell === "-") rowspan++;
-                                else break;
-                            }
-                        }
-                        if (rowspan > 1) html += `<td rowspan="${rowspan}" class="fw-bold bg-light">${content}</td>`;
-                        else html += `<td>${content}</td>`;
-                    });
-                    html += `</tr>`;
-                }
+               // Menggunakan kolom sesuai config untuk mencari kata "TOTAL"
+const totalColIndex = config.totalTextCol || 0;
+const isTotalRow = row[totalColIndex] && row[totalColIndex].toString().toUpperCase().includes("TOTAL");
+
+if (isTotalRow) {
+    let jmlCol = row.length;
+    // Gunakan totalValueCol dari config, jika tidak ada ambil kolom terakhir (jmlCol - 1)
+    const vCol = config.totalValueCol !== null ? config.totalValueCol : (jmlCol - 1);
+    const totalValue = row[vCol] || "0"; 
+
+    html += `<tr class="table-secondary fw-bold">
+                <td colspan="${vCol}" class="text-center">TOTAL</td>
+                <td colspan="${jmlCol - vCol}">${totalValue}</td>
+             </tr>`;
+} else {
+    html += `<tr>`;
+    row.forEach(cell => { html += `<td>${cell}</td>`; });
+    html += `</tr>`;
+}
             }
         });
 
