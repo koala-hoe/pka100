@@ -50,5 +50,19 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+    // Ambil elemen offcanvas Anda (pastikan ID-nya sesuai dengan di HTML Anda)
+    const myOffcanvas = document.getElementById('offcanvasNavbar');
 
+    if (myOffcanvas) {
+        myOffcanvas.addEventListener('shown.bs.offcanvas', function () {
+            // Efek akan hilang otomatis setelah 3 detik (3000 ms)
+            setTimeout(() => {
+                // Menggunakan API Bootstrap untuk menutup offcanvas
+                const bsOffcanvas = bootstrap.Offcanvas.getInstance(myOffcanvas);
+                if (bsOffcanvas) {
+                    bsOffcanvas.hide();
+                }
+            }, 3000);
+        });
+    }
 });
